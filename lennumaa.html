@@ -50,19 +50,79 @@
 		kui pidu ei toimu kliendist tulenevatel põhjustel. Küll aga on võimalik ühe aasta jooksul 
 		valida endale uus sobiv aeg. Ülejäänud summa tuleb tasuda ürituse päeval kohapeal sularahas 
 		või ettevõtte arveldusarvele hiljemalt 2 tööpäeva enne ürituse toimumist ja saata 
-		maksekorralduse väljavõte aadressile info@lennumaa.ee.
+		maksekorralduse väljavõte aadressile info@lennumaa.ee.<br>
 
 		Kohtumiseni Lennumaal!
 		</p>
 
+		<!-- VORMID andmete saamiseks ja serverisse saatmiseks-->
+		<form action="data.php" method="GET">
 		
+		</form>
+		
+		<input type="hidden"
+		name="kasutaja_id" value="12345">
+		<input type="text" name="hind"><br>
+		<input type="password" name="hind"><br>
+		
+		<label>Allveetuba</label>
+		<input type="checkbox" name="hind"
+		value="Allveetuba" checked><br>
+		<label>Õhulaev</label>
+		<input type="checkbox" name="hind"
+		value="Allveetuba" checked><br>
+		
+		<label>Allveetuba</label><br>
+		<input type="radio" name="hind"
+		value="Allveetuba" checked><br>
+		<label>Õhulaev</label><br>
+		<input type="radio" name="hind"
+		value="Õhulaev" checked><br>
+		
+		<input type="number" name="hind"><br>
+		<input type="range" name="hind"><br>
+		<input type="color" name="hind"><br>
+		<input type="email" name="hind"><br>
+		<input type="text" placeholder="Teksti placeholder"><br>
+		<input type="select" name="hind"><br>
+		<label>Vali tuba</label>
+			<select>
+				<option>Vali tuba...</option>
+				<option>Pargituba</option>
+				<option>Allveelaevatuba</option>
+				<option>Õhulaev</option>
+			</select>
+				
+			
+		<button type="submit">Saada!</button>
+			
+		<table border = "1">
+			<caption>Tabeli jooned määratakse ikka CSS-is, mitte borderiga</caption>
+			<tr>
+      			<th>Lennumaa</th>
+    		</tr>
+			<tr>
+      			<td>Sisukord</td> <td>Pealkiri</td> <td>Pilt</td>
+			</tr>
+			<tr>
+      			<td>See</td> <td>on</td> <td>tabel</td>
+			</tr>
+		</table
 		
 		<!-- <?php
 		include("counter.php");
 		?>
 		-->
+<!-- kasutatakse tühiku või tühja ruudu jaosk:  &nbsp, <td<&nbsp;</td> vanade brauserite jaoks-->
+<!--
+div on inline ja span on block element. spetsiaalselt CSSis kasutamiseks
+pole vaja seda? Freimidega leht on sisuliselt brauseiaken,mille son teisi braueriaknaid-->
 
-		
+<div>
+Kogu see lõik on eraldi
+paragraaf nagu tavaliselt, aga
+<span>see tekst siin</span> ei käitu tavaliselt
+</div>		
 		<pre>
 		Atraktsioonide kirjeldused
 
@@ -93,6 +153,9 @@
 		Lauajalgpall asub ees kohvikualas ja palli tuleb küsida naeratavate administraatorite käest.
 			
 		</pre>
+		
+		
+		
 		
 		<span id="timer"></span>
 		
