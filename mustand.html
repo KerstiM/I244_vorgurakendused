@@ -7,24 +7,7 @@
  		<script src="timer.js"></script> 
 	</head>
 
-	<body>
-			<ul>
-	  		<li>
-	    		<a href="lennumaa.html">Pealeht</a>
-	  		</li>
-	  		<li>
-	    		<a href="galeriiyleslaadimine.html">Lae �les</a>
-	  		</li>
-	  		<li>
-	    		<a href="galerii.html">Galerii</a>
-	  		</li>
-	  		<li>
-	    		<a href="sisselogimine.html">Logi sisse</a>
-	  		</li>
-	  		<li>
-	    		<a href="registreerumine.html">Registreeru</a>
-	  		</li>
-		</ul>	
+	<body>	
 		<h1>Lennumaa</h1>
 		<img src="http://www.lennumaa.ee/wp-content/themes/blankslate/img/LM_logo2.jpg" alt="Logo" style="width:442px;height:185px;">
 		<h2>Tere tulemast Tallinna suurima lennumaa kodulehele!</h2>
@@ -56,6 +39,57 @@
 				<li>lõbustused</li>			
 			</ol>
 		
+		<!-- Teise tunni töö - GALERII -->
+		<h4>Galerii</h4>
+			<img src="" alt="" height="31" width="88" />
+			<img src="" alt="" height="31" width="88" />
+			<img src="" alt="" height="31" width="88" />
+			<img src="" alt="" height="31" width="88" />
+			<img src="" alt="" height="31" width="88" />
+			<img src="" alt="" height="31" width="88" />
+			<img src="" alt="" height="31" width="88" />
+			<img src="" alt="" height="31" width="88" />
+					
+		<!-- SISSELOGIMINE -->		
+		<form action="data.php" method="POST">
+  			<table>
+    			<tr>
+      				<td>Kasutajanimi:</td>
+      				<td><input .../></td>
+    			</tr>
+    			<tr>
+      				<td>parool:</td>
+      			</tr>
+      			
+      		<input type="kasutajanimi" name="Kasutajanimi"><br>
+			<input type="password" name="Parool"><br>
+			<button type="submit">Saada!</button>
+			
+			
+      	</form>			
+      	<form action="data.php" method="POST" enctype="multipart/form-data">
+      		<input type="pealkiri" name="Pealkiri"><br> 
+      		<input type="autor" name="Autor"><br>
+      		<img src="http://www.lennumaa.ee/wp-content/gallery/mangumaa/11053319_1674748346090463_8853252921341569693_n.jpg" alt="Catsod" style="width:190px;height:250px;">
+      		<img src="http://www.lennumaa.ee/wp-content/gallery/mangumaa/11053319_1674748346090463_8853252921341569693_n.jpg" alt="Catsod" style="width:190px;height:250px;">
+      		<button type="submit">Saada!</button>
+      		
+      	
+      	väli pealkirja jaoks
+    väli autori jaoks
+    failiväli suure pildi jaoks
+    failiväli väikse pildi jaoks
+    ja submit nupp vormi esitamiseks
+      	</form>
+      	
+      				
+			
+		
+		<!-- REGISTEERUMINE -->		
+			<input type="kasutajanimi" name="Kasutajanimi"><br>
+			<input type="password" name="Parool"><br>
+			<input type="password" name="Parool uuesti"><br>
+			<button type="submit">Saada!</button>	
 			
 		<h4>Kontakt</h4>
 		<h4>Hinnakiri</h4>
@@ -73,7 +107,71 @@
 		Kohtumiseni Lennumaal!
 		</p>
 
+		<!-- VORMID andmete saamiseks ja serverisse saatmiseks-->
+		<form action="data.php" method="GET">
 		
+		</form>
+		
+		
+		
+		<input type="hidden"
+		name="kasutaja_id" value="12345">
+		<input type="text" name="hind"><br>
+		<input type="password" name="hind"><br>
+		
+		<label>Allveetuba</label>
+		<input type="checkbox" name="hind"
+		value="Allveetuba" checked><br>
+		<label>Õhulaev</label>
+		<input type="checkbox" name="hind"
+		value="Allveetuba" checked><br>
+		
+		<label>Allveetuba</label><br>
+		<input type="radio" name="hind"
+		value="Allveetuba" checked><br>
+		<label>Õhulaev</label><br>
+		<input type="radio" name="hind"
+		value="Õhulaev" checked><br>
+		
+		<input type="number" name="hind"><br>
+		<input type="range" name="hind"><br>
+		<input type="color" name="hind"><br>
+		<input type="email" name="hind"><br>
+		<input type="text" placeholder="Teksti placeholder"><br>
+		<input type="select" name="hind"><br>
+		<label>Vali tuba</label>
+			<select>
+				<option>Vali tuba...</option>
+				<option>Pargituba</option>
+				<option>Allveelaevatuba</option>
+				<option>Õhulaev</option>
+			</select>
+				
+			
+		<button type="submit">Saada!</button>
+			
+		<table border = "1">
+			<caption>Tabeli jooned määratakse ikka CSS-is, mitte borderiga</caption>
+			<tr>
+      			<th>Lennumaa</th>
+    		</tr>
+			<tr>
+      			<td>Sisukord</td> <td>Pealkiri</td> <td>Pilt</td>
+			</tr>
+			<tr>
+      			<td>See</td> <td>on</td> <td>tabel</td>
+			</tr>
+		</table
+		
+		<!-- <?php
+		include("counter.php");
+		?>
+		-->
+<!-- kasutatakse tühiku või tühja ruudu jaosk:  &nbsp, <td<&nbsp;</td> vanade brauserite jaoks-->
+<!--
+div on inline ja span on block element. spetsiaalselt CSSis kasutamiseks
+pole vaja seda? Freimidega leht on sisuliselt brauseiaken,mille son teisi braueriaknaid-->
+
 <div>
 Kogu see lõik on eraldi
 paragraaf nagu tavaliselt, aga
