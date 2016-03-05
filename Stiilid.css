@@ -1,8 +1,89 @@
 body {
-    background-color: lightblue;
-}
-
-h1 {
-    color: navy;
-    margin-left: 20px;
-}
+    			background-color: white;
+			    
+			}
+			
+			h1 {
+			    color: navy;
+			    margin-left: 40px;   
+			}
+				
+			h4 {
+			    color: navy;
+			    margin-left: 20px;
+			    font-family: Lucida Sans Unicode; 
+				font-size: 20px;
+			}
+			h5 {
+			    color: darkgray;
+			    margin-left: 60px;
+			    font-family: Lucida Sans Unicode; 
+				font-size: 14px;
+				border-style: dotted;
+				max-width: 650px;
+				border-color: pink;
+				border-width: 5px;
+				border-radius: 10px;
+			}
+			
+			p {
+				font-family: Lucida Sans Unicode; 
+				font-size: 14px;
+				margin-left: 80px;
+				text-align: justify; 
+				max-width: 600px;
+				}
+			.tausthall {
+				cursor: crosshair;
+				color: yellow;
+				background-color: gray;
+				border-color: pink;
+				}
+			.taustsinine{
+				background-color: navy;
+				border-color: purple;
+				}
+			.taustkollane{
+				background-color: yellow;
+				color: purple;
+				border-color: navy;
+				}
+				
+			a {
+				font-family: Lucida Sans Unicode; 
+				font-size: 14px;
+				margin-left: 80px;
+				color: darkgreen;
+			}
+			
+			ul {
+				font-family: Lucida Sans Unicode; 
+				font-size: 14px;
+				margin-left: 60px;
+				font-style: italic;
+				max-width: 600px;
+				list-style: circle;
+			}
+			div.img {
+			    margin: 5px;
+			    border: 1px solid #ccc;
+			    float: left;
+			    width: 180px;
+			    img-align: center;
+			    
+			}	
+			
+			div.img:hover {
+			    border: 3px solid #777;
+			    background-color: blue;
+			}
+			
+			div.img img {
+			    width: 100%;
+			    height: auto;   
+			}
+			
+			div.desc {
+			    padding: 5px;
+			    text-align: center;
+			}
