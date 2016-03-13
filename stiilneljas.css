@@ -1,0 +1,13 @@
+
+	h4 {text-decoration: underline;}
+	h1 {font-style: italic;}	
+ 		
+	.roheline {color: green;}
+	.joonitud {text-decoration: underline;}
+	#tuhmroheline {background-color: rgba(0,255,0, .3); }
+	.suurem {font-size: 200%;}
+	.monospace {font-family: monospace;}
+	#piirjoon {border-style: solid; border-width: strong; background-color: yellow;}
+	#ymar {border-style: dashed; border-radius: 10px;}
+	.kald {font-style: italic; text-align: center;}
+	.crosshair {cursor: crosshair;}
