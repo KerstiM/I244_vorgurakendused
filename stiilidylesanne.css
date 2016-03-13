@@ -1,0 +1,81 @@
+body {
+}			
+		#esimene {
+			position: fixed;
+    		top: 200px;
+    		left: 100px;
+    		width: 300px;
+   			height: 300px;
+		}
+		
+		.teine {
+			position: absolute;
+    		border-radius:50%;  		
+		}
+		
+		.teine:nth-child(1) {
+		    height:100%;
+		    width: 100%;
+		    background: red;
+   			border: 3px solid darkred;
+   			left: 0%;
+   			top: 0%;
+		} 
+		div.teine:nth-child(2) {
+		    height:90%;
+		    width: 90%;
+		    background: white;
+   			border: 3px solid darkred;
+   			left: 5%;
+   			top: 5%;
+		} 
+		div.teine:nth-child(3) {
+		    height: 80%;
+			width: 80%;
+   			background: red;
+   			border: 3px solid darkred;
+   			left: 10%;
+   			top: 10%;
+		} 
+		div.teine:nth-child(4) {
+		    height: 70%;
+		    width: 70%;
+   			background: white;
+   			border: 3px solid darkred;
+   			left: 15%;
+   			top: 15%;
+		} 
+		div.teine:nth-child(5) {
+		    height: 60%;
+		    width: 60%;
+   			background: red;
+   			border: 3px solid darkred;
+   			left: 20%;
+   			top: 20%;
+		} 
+		div.teine:nth-child(6) {
+		    height: 50%;
+		    width: 50%;
+   			background: white;
+   			border: 3px solid darkred;
+   			left: 25%;
+   			top: 25%;
+		} 
+		div.teine:nth-child(7) {
+		    height:40%;
+		    width: 40%;
+   			background: red;
+   			border: 3px solid darkred;
+   			left: 30%;
+   			top: 30%;
+		} 
+		div.teine:nth-child(8) {
+		    height: 30%;
+		    width: 30%;
+   			background: white;
+   			border: 3px solid darkred;
+   			left:(100%-width%)/2;
+   			left: 35%;
+   			top: 35%; 
+		} 
+	
