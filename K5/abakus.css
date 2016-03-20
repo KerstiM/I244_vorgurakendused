@@ -1,0 +1,31 @@
+body {}
+
+	.bead {
+		height: 50px; 
+		width: 50px; 
+		background: lime;
+		border-radius: 50%;
+		box-shadow: 0px -11px 23px -3px black inset;
+		float: right;
+		margin-top: -25px;
+				
+		}
+		
+	.row {
+		clear: both;
+		border: 1px solid darkgreen;
+		margin-top: 50px;
+	}
+		
+	#raam {
+		
+		border: 20px solid lime;
+		border-style: outset;
+		padding-bottom: 50px;
+		
+	}
+		
+		
+		
+		
+	
