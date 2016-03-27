@@ -12,37 +12,36 @@
 		$(document).ready(function() {
 			$("li").first().addClass("active");
 			
+			//next nuppu vajutades olemasolev element kaotab klassi ja järgmine saab
+			//Kui aktiivne klass on viimane, siis mine esimese juurde tagasi
+			//Kui aktiivne pole, siis järgmisele aktiveeri, eelmisel kustuta
+			
 			$("#next").click(function(){
-				$("li").first().removeClass("active");
-				$("li:nth-child(2)").addClass("active");
-					
-				$("#next").click(function(){
-					$("li:nth-child(2)").removeClass("active");
-					$("li:nth-child(3)").addClass("active");
-							
-					$("#next").click(function(){
-							$("li:nth-child(3)").removeClass("active");
-							$("li").last().addClass("active");
-					});
-				});
-			});	
+				if($(".active").is(":last-child")){
+					$("li").removeClass("active");
+					$("li").first().addClass("active");
+				} else { //järjekord oluline, kui prev ees, siis kuvab kaks aktiivset elementi
+					$(".active").next().addClass("active");
+					$(".active").prev().removeClass("active");
+				}			
+			});
+				
+			//next nuppu vajutades olemasolev element kaotab klassi ja eelmine saab
+			//Kui aktiivne klass on viimane, siis mine esimese juurde tagasi
+			//Kui aktiivne pole, siis järgmisel kustuta, eelmisel aktiveeri
 			
 			$("#prev").click(function(){
-				$("li:nth-child(4)").removeClass("active");
-				$("li:nth-child(3)").addClass("active");
-				
-				$("#prev").click(function(){
-					$("li:nth-child(3)").removeClass("active");
-					$("li:nth-child(2)").addClass("active");
+				if($(".active").is(":last-child")){
+					$("li").removeClass("active");
+					$("li").first().addClass("active");
+				} else { //järjekord oluline, kui next ees, siis kuvab kaks aktiivset elementi
+					$(".active").prev().addClass("active");
+					$(".active").next().removeClass("active");
 					
-					$("#prev").click(function(){
-						$("li:nth-child(2)").removeClass("active");
-						$("li:nth-child(1)").addClass("active");
-					});
-				});
-			});
-		});
-	
+					
+				}			
+			});			
+		});	
 </script>
 
 </head>

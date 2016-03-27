@@ -56,3 +56,11 @@ $(document).ready(function() {
 					});
 			});
 	});
+	
+	
+	
+	$("li.click").click(function(){
+	    $("#menu li : first-child").show(); 
+	    $("li:click ul").hide();
+		
+    }); 

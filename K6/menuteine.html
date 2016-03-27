@@ -55,10 +55,14 @@ body {
 	position: absolute; /* vanema suhtes paigutamine*/
 	left: 0px;
 	width: 100%; 
-	display: none; /*lehe laadimisel peidus */
 }
 #menu ul a {
 	width: 100%;
+}
+
+#menu ul>li {
+	height:0px;
+	display: none; /*lehe laadimisel peidus */
 }
 
 	</style>
@@ -71,7 +75,7 @@ body {
 	<ul id="menu">
 		<li>
 			<a href="?">tavaline link</a>
-		</li><li class="hover">
+		</li><li>
 			<span>kohale minnes</span>
 			<ul>
 				<li><a href="?">link</a></li>
@@ -79,7 +83,7 @@ body {
 				<li><a href="?">link</a></li>
 				<li><a href="?">link</a></li>
 			</ul>
-		</li><li class="hover">
+		</li><li>
 			<span>kohale minnes</span>
 			<ul>
 				<li><a href="?">link</a></li>
@@ -87,7 +91,7 @@ body {
 				<li><a href="?">link</a></li>
 				<li><a href="?">link</a></li>
 			</ul>
-		</li><li class="click">
+		</li><li>
 			<span>klikkides</span>
 			<ul>
 				<li><a href="?">link</a></li>
@@ -95,7 +99,7 @@ body {
 				<li><a href="?">link</a></li>
 				<li><a href="?">link</a></li>
 			</ul>
-		</li><li class="click">
+		</li><li>
 			<span>klikkides</span>
 			<ul>
 				<li><a href="?">link</a></li>
@@ -118,22 +122,14 @@ body {
 
 <script>
 $(document).ready(function() {
-	$("li.hover").mouseenter(function(){
-		$("li:hover ul").show();
-		$("li.click ul").hide();
-    });
-    
-    $("li.hover").mouseleave(function(){
-		$("li:hover ul").hide();
-		$("li.click ul").hide();
-    });
-    
-    $("li.click").click(function(){
-	    $("li.click ul").hide();
-		$(this).children().show();	
-		
-    }); 
-          
+	
+	$("#menu").mouseenter(function(){
+		$("li").find("span").show().animate({"height":"20px"}); 
+		});
+	
+	$("#menu").mouseleave(function(){ 
+        $("li").find("span").hide().animate({"height":"0px"});
+	    });
 });
 	
 </script>
