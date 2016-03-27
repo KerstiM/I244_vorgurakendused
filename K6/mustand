@@ -1,0 +1,58 @@
+<script>
+$(document).ready(function() {
+	$("li.click").click(function(){ 
+		$(this).toggleClass ('click');
+			if ( $( this ).hasClass( 'click' ) ) {
+        		$( 'ul' ).show();
+    		} else {
+        		$( 'ul' ).hide();
+    		}
+    	//$(document).click( function(){
+        	//$('ul').hide();
+    });
+			
+		});
+	});
+</script>
+
+//$("#menu li : first-child").css("color", "blue").hide("slow") 
+//menüü sees olev esimene li element. css muudab valitud li elementi ja peidab selle aeglaselt
+//$("#menu li").click(function(){
+//	$(this).addClass("active"); });
+//css. pean muutma active classi, andma mingi stiili nt
+
+	$("#menu li : first-child").click(function(){ 
+		$( this ).show(); });
+		
+	$("#menu li : last-child").click(function(){ 
+		$( this ).show(); });	
+	});
+	
+	
+	 
+    
+    $("#edasi").click(function(){
+		$('ul').removeClass('active');
+		$('ul').next().addClass('active');
+		});
+		
+		
+		$("#prev").click(function(){
+		$("li:nth-child(2)").removeClass("active");
+		
+		$("li").first().addClass("active");
+		
+			$("#prev").click(function(){
+				$("li:nth-child(3)").removeClass("active");
+				$("li:nth-child(4)").removeClass("active");
+				$("li:nth-child(1)").removeClass("active");
+				$("li:nth-child(2)").addClass("active");
+				
+					$("#prev").click(function(){
+						$("li").last().removeClass("active");
+						$("li:nth-child(2)").removeClass("active");
+						$("li:nth-child(1)").removeClass("active");
+						$("li:nth-child(3)").addClass("active");
+					});
+			});
+	});

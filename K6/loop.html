@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8" />
+	<title>Kodune Ülesanne</title>
+	<style type="text/css">
+	.active { background: skyblue; padding: 10px;}
+	</style>
+	<script type="text/javascript" src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+	<script type="text/javascript"></script>
+	<script>
+		$(document).ready(function() {
+			$("li").first().addClass("active");
+			
+			$("#next").click(function(){
+				$("li").first().removeClass("active");
+				$("li:nth-child(2)").addClass("active");
+					
+				$("#next").click(function(){
+					$("li:nth-child(2)").removeClass("active");
+					$("li:nth-child(3)").addClass("active");
+							
+					$("#next").click(function(){
+							$("li:nth-child(3)").removeClass("active");
+							$("li").last().addClass("active");
+					});
+				});
+			});	
+			
+			$("#prev").click(function(){
+				$("li:nth-child(4)").removeClass("active");
+				$("li:nth-child(3)").addClass("active");
+				
+				$("#prev").click(function(){
+					$("li:nth-child(3)").removeClass("active");
+					$("li:nth-child(2)").addClass("active");
+					
+					$("#prev").click(function(){
+						$("li:nth-child(2)").removeClass("active");
+						$("li:nth-child(1)").addClass("active");
+					});
+				});
+			});
+		});
+	
+</script>
+
+</head>
+<body>
+<button id="next">edasi</button>
+<button id="prev">tagasi</button>
+
+<ul>
+<li>esimene</li>
+<li>teine</li>
+<li>kolmas</li>
+<li>neljas</li>
+</ul>
+
+</body>
+</html>
