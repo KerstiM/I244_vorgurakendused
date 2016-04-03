@@ -33,8 +33,14 @@ Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu 
 
 /*
     SIIN ESITADA TEKST NII; ET IGA PRAGRAHVI ALGUSTÄHT ON SUUR (span vahel)
+    
 */
-?>
+	$l6ik = explode("\n", $text); //jagab teksti reavahetuste kaupa lõikudeks
+		foreach ($l6ik as $value) {//iga lõik saab endale value
+			$value = "<p>"."<span>".$value[0]."</span>".substr($value, 1)."</p>"; //iga lõik on omaette paragrahv, esimene täht on spani vahel, ülejäänud tekst kuvatakse substringina.	
+			echo "$value";
+		}
+	?>
 </div>
 </body>
 </html> 
