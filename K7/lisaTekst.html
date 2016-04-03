@@ -1,0 +1,52 @@
+ <!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Include tekst</title>
+    
+    <style>
+   		p {
+		    font-size: 20px;
+		    text-align: center;
+		    border: solid green 10px; 
+		    border-radius: 10px; 
+		    padding: 20px;
+		    
+		}
+		span {
+			font-weight: bold;
+			font-family: serif;
+			font-size: 30px;
+			color: blue;
+		}
+		
+    </style>
+</head>
+<body>
+<div>
+    <p>
+    	<span>
+    	<?php 
+  			echo $kass['nimi'];
+  		?> 
+  		</span>
+  		on 
+  		<?php 
+  			echo $kass['vanus'];
+  		?> 
+  		aastane ja tema omanik on 
+  		<?php 
+  			echo $kass['omanikuNimi'];
+  		?>. Tema 
+  		<?php 
+  			echo $kass['karvaPikkus'];
+  		?>
+  		karvkate on 
+  		<?php 
+  			echo $kass['karvaV2rv'];
+  		?>.
+  		</p>
+
+</div>
+</body>
+</html> 
