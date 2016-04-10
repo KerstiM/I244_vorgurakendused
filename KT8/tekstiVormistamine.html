@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Lennumaa koduleht</title>
+		<!--<meta charset="UTF-8">-->
+		<!--<link rel="stylesheet" type="text/css" href="stiilid_8.css">-->
+		<style>
+	
+		
+			label {
+				display: inline-block;
+			    float: left;
+			    clear: left;
+			    width: 220px;
+			    text-align: right;
+				font-family: Monospace; 
+				font-size: 14px;
+			    color: graphite;
+			    list-style-type: none;
+			    margin-left: 20px;
+			    padding: 5px;
+			}
+			input[type=submit] {
+			    margin-left: 50px;
+			    text-align: center;
+			    display: inline-block;
+		  		float: left;
+			}
+			
+			textarea {
+			    margin-left: 20px;
+			    text-align: left;
+			    display: inline-block;
+		  		float: left;
+			}
+			button {
+				font-family: Monospace; 
+				font-size: 14px;
+			    margin-left: 20px;
+			    padding: 10px;
+			}
+			h5 {
+				font-family: Monospace; 
+				font-size: 16px;   
+			}
+			#kast {
+				border-style: solid;
+				max-width: 600px;
+				min-height: 250px;
+				border-color: lightblue;
+				border-width: 2px;
+				border-radius: 5px;
+				margin-left: 0px;
+				margin-top: 50px;
+				margin-bottom: 10px;
+			}
+    </style>
+    
+	</head>
+
+	<body>			
+      	<!--action="data.php" method="POST" enctype="multipart/form-data">-->
+
+		<!-- VORMID andmete saamiseks ja serverisse saatmiseks-->
+		<form action="data.php" method="POST">
+		
+		</form>
+		<textarea name="tekst" cols="23" rows="4" placeholder="Teksti sisu kirjuta siia"></textarea></br></br>
+		
+		<label>Teksti suurus</label>
+			<input type="number" name="text-suurus"><br>
+		
+		<label>Tekst Bold/Italic</label><br>
+			<label>Bold</label>
+				<input type="checkbox" name="bold"
+					value="Bold" checked><br>
+			<label>Italic</label>
+				<input type="checkbox" name="italic"
+					value="Italic" checked><br>
+		
+		<label>Teksti värv</label>
+			<input type="color" name="color"><br>
+		
+		<label>Teksti taustavärv</label>
+			<input type="color" name="back-color"><br>
+			
+	<div id="kast">		
+		<label><h5>Piirjoone stiil</h5></label><br>
+			<label>Dotted</label>
+				<input type="radio" name="bold"
+					value="Dotted" checked><br>
+			<label>Solid</label>
+				<input type="radio" name="italic"<br>
+									
+			<label>Double</label>
+				<input type="radio" name="italic"<br>
+		
+			<label>Dashed</label>
+				<input type="radio" name="italic"<br>
+			
+		<label>Piirjoone laius</label>
+			<input type="number" name="border-width><br>
+		
+		<label>Piirjoone värv</label>
+			<input type="color" name="border-color"><br>
+			
+		<label>Piirjoone nurga raadius px</label>
+			<input type="number" name="border-radius" min="0" max="100"><br>
+	</div>
+				
+		<button type="submit">NÄITA VORMISTUST!</button>
+
+		<!-- valideerimise tÃµend-->
+		
+		<p>
+ 			<a href="http://validator.w3.org/check?uri=referer">
+  				<img src="http://www.w3.org/Icons/valid-xhtml10" alt="Valid XHTML 1.0 Strict" height="31" width="88" />
+ 			</a>
+		</p>
+	
+	  	
+	</body>
+</html>
+
+
+
+
+
+

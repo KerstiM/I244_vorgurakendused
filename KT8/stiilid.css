@@ -1,0 +1,131 @@
+body {
+    			background-color: white;
+			    
+			}
+			#sisu {
+				min-width: 600px;
+				max-width: 1000px;
+				margin: auto;
+			}
+			
+			.pealehesisu {
+				margin: auto;
+			}
+			
+			ul {
+			    list-style-type: none;
+			    margin: 0;
+			    padding: 0;
+			    overflow: hidden;
+			    background-color: #333;
+			}
+			
+			li {
+			    float: left;
+			}
+			
+			li a {
+			    display: block;
+			    color: white;
+			    text-align: center;
+			    padding: 14px 16px;
+			    text-decoration: none;
+			    font-family: Lucida Sans Unicode; 
+				font-size: 14px;
+			}
+			.active {
+		   		background-color: #4CAF50;
+				}
+			/* Change the link color to #111 (black) on hover */
+			li a:hover {
+			    background-color: #111;
+			}
+			
+			h2 {
+			    color: navy;
+			    margin-left: 40px;
+			    font-family: Lucida Sans Unicode; 
+				font-size: 30px;
+				   
+			}
+				
+			h4 {
+			    color: navy;
+			    margin-left: 20px;
+			    font-family: Lucida Sans Unicode; 
+				font-size: 20px;
+			}
+			h5 {
+			    color: darkgray;
+			    margin-left: 60px;
+			    font-family: Lucida Sans Unicode; 
+				font-size: 14px;
+				border-style: dotted;
+				max-width: 650px;
+				border-color: pink;
+				border-width: 5px;
+				border-radius: 10px;
+			}
+			
+			p {
+				font-family: Lucida Sans Unicode; 
+				font-size: 14px;
+				margin-left: 80px;
+				text-align: justify; 
+				max-width: 600px;
+				}
+			.pealehesokid {
+				font-family: Lucida Sans Unicode; 
+				font-size: 14px;
+				margin-left: 40px;
+				text-align: justify; 
+				max-width: 600px;
+			}
+			
+			.em{
+				font-family: Lucida Sans Unicode; 
+				font-size: 12px;
+				margin-left: 40px;
+				text-align: justify; 
+				max-width: 600px;
+				font-style: italic;
+			}
+			.tausthall {
+				cursor: crosshair;
+				color: yellow;
+				background-color: gray;
+				border-color: pink;
+				}
+			.taustsinine{
+				background-color: navy;
+				border-color: purple;
+				}
+			.taustkollane{
+				background-color: yellow;
+				color: purple;
+				border-color: navy;
+				}
+			
+			div.img {
+			    margin: 5px;
+			    border: 1px solid #ccc;
+			    float: left;
+			    width: 180px;
+			    img-align: center;
+			    
+			}	
+			
+			div.img:hover {
+			    border: 3px solid #777;
+			    background-color: blue;
+			}
+			
+			div.img img {
+			    width: 100%;
+			    height: auto;   
+			}
+			
+			div.desc {
+			    padding: 5px;
+			    text-align: center;
+			}
