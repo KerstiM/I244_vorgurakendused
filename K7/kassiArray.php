@@ -3,10 +3,7 @@
 <head>
     <meta charset="utf-8" />
     <title>Include tekst</title>
-    
-    <style>
-   
-    </style>
+  
 </head>
 <body>
 
