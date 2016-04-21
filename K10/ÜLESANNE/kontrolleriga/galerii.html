@@ -1,0 +1,6 @@
+	<h3>Fotod</h3>
+	<div id="gallery">
+		<?php foreach ($pildid as $key => $sisemisedPildid): ?>
+			<img src="<?php echo $sisemisedPildid['link']; ?>" alt="<?php echo $sisemisedPildid['alt']; ?>"/>
+		<?php endforeach;?>
+	</div>
