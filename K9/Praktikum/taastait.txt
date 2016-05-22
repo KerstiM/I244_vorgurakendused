@@ -1,0 +1,46 @@
+<?php
+	//echo "<pre>";
+	//print_r($_POST);
+	//echo "</pre>";
+	
+	$error= array();
+if (!empty($_POST)){ // vorm esitati
+	if (!empty($_POST['nimi'])) {
+		$nimi= $_POST['nimi'];
+	} else {
+		$error[] = "Nimi puudu!"; 
+	}
+
+	if (!empty($_POST['sugu'])) {
+		$sugu= $_POST['sugu'];
+	} else {
+		$error[] = "Sugu puudu!"; 
+	}
+	
+	if (!empty($_POST['aadress'])) {
+		$aadress= $_POST['aadress'];
+	} else {
+		$error[] = "Aadress puudu!"; 
+	}
+
+	if (!empty($_POST['amet'])) {
+		$amet= $_POST['amet'];
+	} else {
+		$error[] = "Amet puudu!"; 
+	}
+
+	// oli vigu?
+	if (!empty($error)){ // oli kĆ¼ll
+		include("vormid.html");
+	} else {
+		// success
+		echo "<p style=\"color: green; font-size: 30px;\">Vorm edukalt esitatud!</p>";
+	}
+
+} else { // POST on tĆ¼hi == esimene lehele tulek / vorm esitamata
+	//echo "<pre>Vead: ";
+	//print_r($error);
+	//echo "</pre>";
+	include("vormid.html");
+}
+?>

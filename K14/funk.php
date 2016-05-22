@@ -27,7 +27,7 @@ function kuva_puurid(){
 	include_once('views/puurid.html');
 	
 }
-function logi(){
+function login(){
 	// siia on vaja funktsionaalsust (13. nädalal)
 	global $connection;
 	

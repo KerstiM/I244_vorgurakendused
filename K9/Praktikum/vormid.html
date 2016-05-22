@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8"/>
+		<title>HTML vormid</title>
+	</head>
+	<body>
+		<form action="taastait.php" method="POST">
+			Nimi 
+			<input type="text" name="nimi" value="<?php if (!empty($nimi)) { echo $nimi; } ?>" />
+			<br/>
+			<label>Mees <input type="radio" name="sugu" value="Mees" 
+					<?php if (!empty($sugu) && $sugu=="Mees"): ?>checked<?php endif;?> 
+			/></label>
+			<br/>
+			<label>Naine <input type="radio" name="sugu" value="Naine" 
+				<?php if (!empty($sugu) && $sugu=="Naine"): ?>checked<?php endif;?>
+			/></label>	
+			<br/>
+			<textarea name="aadress" rows="3" cols="40"><?php if (!empty($aadress)) { echo $aadress; } ?></textarea><br/>
+			<select name="amet">
+				<option value="0" >Vali amet!</option>
+				<option <?php if (!empty($amet) && $amet=="korstnapühkija"): ?>selected<?php endif;?> >korstnapühkija</option>
+				<option <?php if (!empty($amet) && $amet=="kalamees"): ?>selected<?php endif;?> >kalamees</option>
+				<option <?php if (!empty($amet) && $amet=="kingsepp"): ?>selected<?php endif;?> >kingsepp</option>
+			</select>
+			<br/>
+			<input type="submit" value="Saada!"/>
+		</form>
+		<?php foreach($error as $err): ?>
+			<p style="color:red"><?php echo $err; ?></p>
+		<?php endforeach; ?>
+	</body>
+</html>

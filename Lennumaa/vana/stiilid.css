@@ -3,12 +3,12 @@ body {
 			    
 			}
 			#sisu {
-				min-width: 600px;
-				max-width: 1000px;
-				margin: auto;
+			
+				/*margin: auto;*/
 			}
 			
 			.pealehesisu {
+	
 				margin: auto;
 			}
 			
@@ -18,10 +18,26 @@ body {
 			    padding: 0;
 			    overflow: hidden;
 			    background-color: #333;
+				text-align; center;
+					
+			}       
+			
+			nav {
+				width: 600px;
+				margin: auto;
+			
 			}
 			
 			li {
 			    float: left;
+				width: 100px;
+				height: 40px;
+				line-height: 40px;
+				
+				margin-left: 2px;
+				margin-right: 2px;
+				display: inline-block;
+				
 			}
 			
 			li a {

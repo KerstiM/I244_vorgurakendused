@@ -71,4 +71,3 @@ if (!empty($_POST)) { //vorm esitati
 <?php endif;?>
 
 </html>
-
