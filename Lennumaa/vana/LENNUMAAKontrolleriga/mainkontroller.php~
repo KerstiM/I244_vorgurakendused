@@ -1,7 +1,7 @@
 <?php
 	
 
-	include_once("head.html");
+	require_once("head.html");
 	
 	if (!empty($_GET["mode"])) {
 		$mode=$_GET["mode"];
@@ -27,5 +27,5 @@
 			break;
 	}
 
-	include_once("foot.html");
+	require_once("foot.html");
 ?>
