@@ -8,24 +8,33 @@ function connect_database(){
 	$db="test";
 	$connection = mysqli_connect($host, $user, $pass, $db) or die("ei saa ühendust mootoriga- ".mysqli_error());
 	mysqli_query($connection, "SET CHARACTER SET UTF8") or die("Ei saanud baasi utf-8-sse - ".mysqli_error($connection));
+	
+}
+
+function end_session(){
+	$_SESSION = array();
+	if (isset($_COOKIE[session_name()])) {
+ 	 setcookie(session_name(), '', time()-42000, '/');
+	}
+	session_destroy();
 }
 
 function login(){
 
 	if (isset($_POST['loggedinuser'])) {
-		include_once('booking.html');
+		include_once("views/booking.php");
 	}
 
-	include_once('login.html');
+	include_once("views/login.php");
 
 	if (isset($_SERVER['REQUEST_METHOD'])) {
 		if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 			$errors = array();
 			if (empty($_POST['user'])) {
-				$errors[] = "Please enter both username and password.";
+				$errors[] = "Palun sisesta kasutajanimi ja parool.";
 			}
 			if (empty($_POST['pass'])) {
-				$errors[] = "Please enter both username and password.";
+				$errors[] = "Palun sisesta kasutajanimi ja parool.";
 			}
 
 			if (empty($errors)){
@@ -33,11 +42,11 @@ function login(){
 				$sisestatudusername = mysqli_real_escape_string($connection, $_POST["user"]);
 				$sisestatudpassword = mysqli_real_escape_string($connection, $_POST["pass"]);
 				$sql = "SELECT username, password FROM KerstiM_LennumaaKasutajad WHERE username='$sisestatudusername' AND password=SHA1('$sisestatudpassword')";
-				$result = mysqli_query($connection, $sql) or die ("User by this name does not exist.");
+				$result = mysqli_query($connection, $sql) or die ("Sellise kasutajanimega kasutajat ei leidu");
 				$rida = mysqli_num_rows($result);
 				if ($rida > 0) { //user was found in db
 					$_SESSION['loggedinuser'] = $sisestatudusername;
-					header("Location: ?page=projects");
+					header("Location: controller.php?page=main");
 				} 
 			}
 		}
@@ -45,38 +54,39 @@ function login(){
 }
 
 function logout(){
-	$_SESSION=array();
-	session_destroy();
-	header("Location: ?page=homepage");
+	end_session();
+	header('Location: controller.php?page=main');
 }
 
 function registration(){
 	if (isset($_POST['loggedinuser'])) {
-		include_once('projects.html');
+		include_once("views/booking.php");
 	} else {
-		include_once('registration.html');
+		include_once("views/registration.php");
 	}
 
 	if (isset($_SERVER['REQUEST_METHOD'])) {
 		if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 			$errors = array();
 			if (empty($_POST['username_reg'])) {
-				$errors[] = "Please enter username.";
+				$errors[] = "Palun sisesta kasutajanimi.";
 			}
 			if ($_POST['password_reg1'] != $_POST['password_reg2']) {
-				$errors[] = "Passwords do not match, please enter again.";
+				$errors[] = "Paroolid ei kattu, palun proovi uuesti.";
 			}
 			if (empty($_POST['password_reg1'])) {
-				$errors[] = "Please enter password.";
+				$errors[] = "Palun sisesta parool.";
 			}
 			if (empty($_POST['password_reg2'])) {
-				$errors[] = "Please repeat password.";
+				$errors[] = "Palun korda parooli.";
 			}
 
 			if (empty($errors)){
-				//viska sisestatud andmed andmebaasi ja pane andmebaasist sisestatud kasutaja sessiooni, suuna projektide lehele, muidu kuva registration.html
+				//sisestatud andmed andmebaasi
+				//andmebaasist sisestatud kasutaja sessiooni
+				//suuna broneerimise lehele, muidu kuva registration.php
 
-				echo "You have been registered!";
+				echo "Oled registreeritud!";
 
 				global $connection;
 				$registeredusername = mysqli_real_escape_string($connection, $_POST["username_reg"]);
@@ -87,7 +97,7 @@ function registration(){
 				if ($result) {
 					if (mysqli_insert_id($connection) > 0) {
 						$_SESSION['loggedinuser'] = $registeredusername;
-						header("Location: ?page=projects");
+						header("Location: controller.php?page=booking");
 						exit(0);
 					}
 				}
@@ -102,23 +112,23 @@ function registration(){
 
 
 function kuva_main() {
-	include_once('main.html');
+	include_once("views/main.php");
 }
 
 function kuva_events() {
-	include_once('events.html');
+	include_once("views/events.php");
 }
 
 function kuva_gallery() {
-	include_once('gallery.html');
+	include_once("views/gallery.php");
 }
 
 function kuva_contact() {
-	include_once('contact.html');
+	include_once("views/contact.php");
 }
 
 function kuva_booking() {
-	include_once('booking.html');
+	include_once("views/booking.php");
 }
 
 

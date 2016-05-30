@@ -9,7 +9,7 @@ if (isset($_GET['page']) && $_GET['page']!=""){
 	$page=htmlspecialchars($_GET['page']);
 }
 
-include_once('head.html');
+include_once('head.php');
 
 switch($page){
 	case "main":
@@ -38,11 +38,11 @@ switch($page){
 	break;
 	
 	default:
-		include_once('main.html');
+		include_once("views/main.php");
 	break;
 }
 
-include_once('foot.html');
+include_once("foot.php");
 
 ?>
 
