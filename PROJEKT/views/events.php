@@ -1,31 +1,38 @@
 	<h1>SÜNNIPÄEVAD JA ÜRITUSED</h1>
 	
+	
+	<?php if(isset($_SESSION['loggedinuser'])): ?>
+		<h1><a href="?page=booking">Broneeri</a> üritus juba täna!</h1>						
+	<?php else: ?>
+		<h1 class="textBIG"><a href="?page=login">Logi sisse</a> või <a href="?page=registration">Registreeri</a>, et broneerida!</h1>
+	<?php endif; ?>
+	
 		<div class="left">
-			<h5>Pargituba</h5>
-				<p class="paragraph">		
+			<h2>Pargituba</h2>
+				<p class="textBIG">		
 					Antud tuba meenutab Parki, kus on puud, lilled ning lauad ja 
 					toolid on kui mesilase kärg. Tuba on valguskülane ja hubane 
 					ning meeldib kasutada paljude pisemate laste sünnipäevade pidamiseks. 
 					Pargi tuppa mahub 35 last ja lisaks nende saatjad.
 				</p>
 							
-			<h5>Allveelaevatuba</h5>
-				<p class="paragraph">	
+			<h2>Allveelaevatuba</h2>
+				<p class="textBIG">	
 					Allveelaeva tuba on soe ja hubane ning meeldib just poistele. 
 					Toas on olemas allveelaevaga seonduvad ikoonid. 
 					Tuba mahutab 35 last ja lisaks nende saatjad.
 				</p>
 					
-			<h5>Õhulaev</h5>
-				<p class="paragraph">		
+			<h2>Õhulaev</h2>
+				<p class="textBIG">		
 					Õhulaeva tuba on kujundatud imiteeriaks õhulaevaga lendu. 
 					Toas on naturaalsest puidust mööbel. See on meie keskuse 
 					kõige suurem sünnipäevatuba, mis mahutab 45 last ja lisaks nende saatjad.
 				</p>
-						
+		<hr/><br/>			
 		<p>
-		<h6>Atraktsioonide kirjeldused</h6>
-			<p class="paragraph">
+		<h2>Atraktsioonide kirjeldused</h2>
+			<p class="textBIG">
 			Lennumaal on võimalik väikeste lastega toredalt aega veeta meie väikelaste alas, 
 			mis on mõeldud 0 kuni 3 aastastele lastele. Seal saab teha süüa iga väikene meie 
 			väikelaste mänguköögis. Julgemad lapsed saavad ronida ja lasta liugu. 
@@ -34,7 +41,7 @@
 			Väikelaste alale järgneb meil laskeala, kus on 8 õhupüssi ja üks kahur, 
 			mis on paljude laste lemmikud.</p>
 			
-			<p class="paragraph">
+			<p class="textBIG">
 			Laskealale järgneb autode ala, kus saab kihutada võidu oma väiksemate 
 			või suuremate õdede ja vendadega või teiste külastajatega. 
 			Millele järgneb ronimisala. Ronimisala saab alguse autoalast. Ronimisala on kolme korruseline, 
@@ -55,7 +62,7 @@
 		</div>
 		
 		<div class="right">
-		<h1>LENNUMAA SÜNNIPÄEVATOA EESKIRJAD</h1>
+		<h2>LENNUMAA SÜNNIPÄEVATOA EESKIRJAD</h2>
 		<div id="rules">
 			<ul>
 				<li>Peo pidamiseks on ette nähtud täpselt 3 tundi.</li>

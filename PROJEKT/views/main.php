@@ -5,8 +5,8 @@
 	<div class="clearfix"></div>
 	
 		<div class="left">
-			<h1>Lennumaa on Tallinna kõige suurem sisemängukeskus koos kolme erineva sünnipäevatoaga.</h1> 
-			<h1>Iga toal on oma nägu ja tegu, mis teeb sünnipäevade pidamise eriti põnevaks. Igaüks leiab omale sobiva!</h1>
+			<h1>Lennumaa on Tallinna kõige suurem sisemängukeskus koos kolme erineva sünnipäevatoaga. 
+			Iga toal on oma nägu ja tegu, mis teeb sünnipäevade pidamise eriti põnevaks. Igaüks leiab omale sobiva!</h1>
 		</div>
 		
 		<div class="right">

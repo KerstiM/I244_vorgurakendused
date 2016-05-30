@@ -55,7 +55,7 @@ body {
 		font-family: 'Fjalla One', sans-serif;
 		font-size: 18px;
 		font-weight: 500;
-		letter-spacing: 3px;
+		letter-spacing: 2px;
 		line-height: 20px;
 		margin-bottom: 1px;
 		text-align: center;
@@ -65,7 +65,7 @@ body {
 	.menu #menu_reg li a{
 		background: #F1F1F1; /*menüü riba taustavärv;  */
 		display: block;
-		padding: 10px 10px;
+		padding: 8px 8px;
 		font-weight: normal;
 		font-size: 14px;
 		color: #322F2C; /*menüü fondi värv*/
@@ -75,10 +75,10 @@ body {
 	.menu #menu_diff li a{
 		background: #F1F1F1; /*menüü riba taustavärv;  */
 		display: block;
-		padding: 10px 10px;
+		padding: 8px 8px;
 		font-weight: normal;
 		font-size: 14px;
-		color: #75C9BB; /*menüü fondi värv*/
+		color: #47b8b8; /*menüü fondi värv*/
 		text-decoration: none;
 		
 	}
@@ -111,8 +111,17 @@ body {
 		color: #999999;
 		font-family: 'PT Sans Narrow';
 		font-size: 18px;
-		text-align: center;
+		text-align: left;
+		
 	}	
+	
+	.textBIG {
+		color: #999999;
+		font-family: 'PT Sans Narrow';
+		font-size: 18px;
+		text-align: left;
+		margin-right: 30px;
+	}
 /*-----------------CONTACT END------------------*/
 /*-----------------CONTENT START------------------*/	
 	.quote {
@@ -122,7 +131,44 @@ body {
 	}
 	
 	h1 {
-		color: #75C9BB;
+		color: #47b8b8;
+		font-family: 'Fjalla One', sans-serif;
+		font-size: 24px;
+		font-weight: 500;
+		letter-spacing: 3px;
+		line-height: 30px;
+		margin-bottom: 10px;
+		text-align: left;
+		text-transform: uppercase;
+	}
+	
+	/*.link{
+		color: #b30059;
+		font-family: 'Fjalla One', sans-serif;
+		font-size: 24px;
+		font-weight: 500;
+		letter-spacing: 3px;
+		line-height: 20px;
+		margin-bottom: 10px;
+		text-align: left;
+		text-transform: uppercase;
+		font-style: italic;
+		border-style: solid;
+		border-weight: 0.5px;
+		border-radius: 5px;
+		display: inline;
+		margin: 2px;
+		padding: 2px;
+	}
+	*/
+	
+	a:link {
+		text-decoration: none;
+		color: #b30059;
+	}
+	
+	h2 {
+		color: #47b8b8;
 		font-family: 'Fjalla One', sans-serif;
 		font-size: 18px;
 		font-weight: 500;
@@ -133,20 +179,20 @@ body {
 		text-transform: uppercase;
 	}
 	
-	h2 {
-		color: #75C9BB;
+	
+	h3 {
+		color: #47b8b8;
 		font-family: 'Fjalla One', sans-serif;
 		font-size: 14px;
 		font-weight: 500;
-		letter-spacing: 3px;
-		line-height: 30px;
-		margin-bottom: 10px;
-		text-align: left;
+		letter-spacing: 2px;
+		line-height: 20px;
+		/*text-align: center;*/
 		text-transform: uppercase;
 	}
 	
 	h5 {
-		color: #75C9BB;
+		color: #47b8b8;
 		font-family: 'Fjalla One', sans-serif;
 		font-size: 14px;
 		font-weight: 500;
@@ -157,7 +203,7 @@ body {
 	}
 	
 	h6 {
-		color: #75C9BB;
+		color: #47b8b8;
 		font-family: 'Fjalla One', sans-serif;
 		font-size: 14px;
 		font-weight: 500;
@@ -209,7 +255,7 @@ body {
 	}
 	
 	input, textarea{
-		color: #75C9BB;
+		color: #47b8b8;
 		font-family: 'PT Sans Narrow';
 		font-size: 16px;
 		width: 210px;
@@ -245,6 +291,11 @@ body {
 		font-size: 2 em;
 	}
 	
+	h1.link {
+		float: left;
+		display: block;
+	}
+	
 	header {
 		margin-bottom: -30px;
 	}
@@ -267,7 +318,7 @@ body {
 	.menu li {
 		text-align: center;
 		margin-left: 0 auto;
-		width: 96%; /*<!-- responsive menüü laius-->*/
+		width: 100%; /*<!-- responsive menüü laius-->*/
 	}
 	.menu ul li a{
 		padding: 8px 0;
