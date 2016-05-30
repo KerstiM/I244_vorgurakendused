@@ -1,51 +1,38 @@
-
-		<h1>Broneeri</h1>	
+	<h1>Broneeri</h1>	
 			
 			<div class="left">
-				<h2>Meie mängukeskuses on teil võimalik valida kolme erineva sünnipäevatoa vahel. 
-				Iga tuba on oma nägu ja tegu, mis tagab selle, et iga laps leiab 
-				Lennumaalt oma lemmik toa, kus oma sünnipäeva pidada.</h2>
-				
-			<div class="small-wrapper">
-					<center>
-					<form action="views/booking.php" method="POST">
-						<h5>Sünnipäevatuba</h5><br>
-							<select name="tubavarkaks" form="tubavarkaks">
-							  <option value="vali tuba">Vali tuba...</option>
-							  <option value="pargituba">Pargituba</option>
-							  <option value="allveelaevatuba">Allveelaevatuba</option>
-							  <option value="õhulaev">Õhulaev</option>
-							</select><br><br>
-						<h5>Peo toimumisaeg</h5><br>
-							<input type="date" name="kuu" placeholder="Kuupäev"><br><br>
-							<select name="tubavarkaks" form="tubavarkaks">
-							  <option value="vali aeg">Vali aeg...</option>
-							  <option value="hommik">Hommik 09-12</option>
-							  <option value="lõuna">Lõuna 12-15</option>
-							  <option value="pärastlõuna">Pärastlõuna 15-18</option>
-							  <option value="õhtu">Õhtu 18-21</option>
-							</select><br><br>		  			
-							<input type="number" name="lastearv" placeholder="Laste arv" min="1" max="50"><br><br>			
-							<input type="email" name="e_mail" placeholder="E-mail"><br><br>		
-							<input type="tel" name="telefoni_number" placeholder="Telefoni number"><br><br>
-							<input type="text" name="kommentaarid" placeholder="Kommentaarid"><br><br>
+				<h2>Meie mÃ¤ngukeskuses on teil vÃµimalik valida kolme erineva sÃ¼nnipÃ¤evatoa vahel. 
+				Iga tuba on oma nÃ¤gu ja tegu, mis tagab selle, et iga laps leiab 
+				Lennumaalt oma lemmik toa, kus oma sÃ¼nnipÃ¤eva pidada.</h2>
 			
-							<input type="submit" value="Saada!"><br><br>
-					</form>
+					<center>
+					
+					<form action="MAILTO:kerstim@gmail.com" method="post" enctype="text/plain">
+							<input type="text" name="name" placeholder="Siseta oma nimi"><br>
+							<input type="text" name="mail" placeholder="Siseta oma e-mail"><br>
+							<textarea rows="5" name="message"  placeholder="SÃµnum" cols="25"></textarea><br>
+							<input type="submit" value="SAADA"></br>
+							<input type="reset" value="PUHASTA">
+						</form>
+						
+				<?php if (isset($errors)):?>
+					<?php foreach($errors as $error):?>
+						<div style="color:red;"><?php echo htmlspecialchars($error); ?></div>
+					<?php endforeach;?>
+				<?php endif;?>
 					</center>
 				
 			</div>
-			</div>
 			
 			<div class="right">
-				<p>Broneerimistasu on 30 eurot, mille palume tasuda 3 päeva jooksul peale broneeringu teostamist. 
-				Broneerimistasu arvestatakse hiljem ürituse kogumaksumusest maha. Broneerimistasu palun kanda 
-				<strong>Reds OÜ</strong> arveldusarvele <strong>EE597700771001082495</strong> märkides selgitusse sünnipäevalapse nimi, 
-				ürituse toimumise kuupäev ja kellaaeg. Broneerimistasu makstes nõustub maksja Reds OÜ poolt 
-				kehtestatud Sünnipäevapeo eeskirjaga. Broneerimistasu ei kuulu tagastamisele, 
-				kui pidu ei toimu kliendist tulenevatel põhjustel. Küll aga on võimalik ühe aasta jooksul 
-				valida endale uus sobiv aeg. Ülejäänud summa tuleb tasuda ürituse päeval kohapeal sularahas 
-				või ettevõtte arveldusarvele hiljemalt 2 tööpäeva enne ürituse toimumist ja saata 
-				maksekorralduse väljavõte aadressile <strong>info@lennumaa.ee.</strong><br>
+				<p>Broneerimistasu on 30 eurot, mille palume tasuda 3 pÃ¤eva jooksul peale broneeringu teostamist. 
+				Broneerimistasu arvestatakse hiljem Ã¼rituse kogumaksumusest maha. Broneerimistasu palun kanda 
+				<strong>Reds OÃœ</strong> arveldusarvele <strong>EE597700771001082495</strong> mÃ¤rkides selgitusse sÃ¼nnipÃ¤evalapse nimi, 
+				Ã¼rituse toimumise kuupÃ¤ev ja kellaaeg. Broneerimistasu makstes nÃµustub maksja Reds OÃœ poolt 
+				kehtestatud SÃ¼nnipÃ¤evapeo eeskirjaga. Broneerimistasu ei kuulu tagastamisele, 
+				kui pidu ei toimu kliendist tulenevatel pÃµhjustel. KÃ¼ll aga on vÃµimalik Ã¼he aasta jooksul 
+				valida endale uus sobiv aeg. ÃœlejÃ¤Ã¤nud summa tuleb tasuda Ã¼rituse pÃ¤eval kohapeal sularahas 
+				vÃµi ettevÃµtte arveldusarvele hiljemalt 2 tÃ¶Ã¶pÃ¤eva enne Ã¼rituse toimumist ja saata 
+				maksekorralduse vÃ¤ljavÃµte aadressile <strong>info@lennumaa.ee.</strong><br>
 				</p>
 			</div>

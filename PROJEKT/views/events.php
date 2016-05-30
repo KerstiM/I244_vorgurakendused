@@ -1,12 +1,11 @@
-		
-	<h1>SÜNNIPÄEVAD JA ÜRITUSED</h1>
+	<h1>SÃœNNIPÃ„EVAD JA ÃœRITUSED</h1>
 	
 		<div class="left">
 			<h5>Pargituba</h5>
 				<p class="paragraph">		
 					Antud tuba meenutab Parki, kus on puud, lilled ning lauad ja 
-					toolid on kui mesilase kärg. Tuba on valguskülane ja hubane 
-					ning meeldib kasutada paljude pisemate laste sünnipäevade pidamiseks. 
+					toolid on kui mesilase kÃ¤rg. Tuba on valguskÃ¼lane ja hubane 
+					ning meeldib kasutada paljude pisemate laste sÃ¼nnipÃ¤evade pidamiseks. 
 					Pargi tuppa mahub 35 last ja lisaks nende saatjad.
 				</p>
 							
@@ -17,56 +16,56 @@
 					Tuba mahutab 35 last ja lisaks nende saatjad.
 				</p>
 					
-			<h5>Õhulaev</h5>
+			<h5>Ã•hulaev</h5>
 				<p class="paragraph">		
-					Õhulaeva tuba on kujundatud imiteeriaks õhulaevaga lendu. 
-					Toas on naturaalsest puidust mööbel. See on meie keskuse 
-					kõige suurem sünnipäevatuba, mis mahutab 45 last ja lisaks nende saatjad.
+					Ã•hulaeva tuba on kujundatud imiteeriaks Ãµhulaevaga lendu. 
+					Toas on naturaalsest puidust mÃ¶Ã¶bel. See on meie keskuse 
+					kÃµige suurem sÃ¼nnipÃ¤evatuba, mis mahutab 45 last ja lisaks nende saatjad.
 				</p>
 						
 		<p>
 		<h6>Atraktsioonide kirjeldused</h6>
 			<p class="paragraph">
-			Lennumaal on võimalik väikeste lastega toredalt aega veeta meie väikelaste alas, 
-			mis on mõeldud 0 kuni 3 aastastele lastele. Seal saab teha süüa iga väikene meie 
-			väikelaste mänguköögis. Julgemad lapsed saavad ronida ja lasta liugu. 
-			Fantaasiarikkad lapsed saavad mängida peitust oma emme ja issiga.
+			Lennumaal on vÃµimalik vÃ¤ikeste lastega toredalt aega veeta meie vÃ¤ikelaste alas, 
+			mis on mÃµeldud 0 kuni 3 aastastele lastele. Seal saab teha sÃ¼Ã¼a iga vÃ¤ikene meie 
+			vÃ¤ikelaste mÃ¤ngukÃ¶Ã¶gis. Julgemad lapsed saavad ronida ja lasta liugu. 
+			Fantaasiarikkad lapsed saavad mÃ¤ngida peitust oma emme ja issiga.
 			
-			Väikelaste alale järgneb meil laskeala, kus on 8 õhupüssi ja üks kahur, 
+			VÃ¤ikelaste alale jÃ¤rgneb meil laskeala, kus on 8 ÃµhupÃ¼ssi ja Ã¼ks kahur, 
 			mis on paljude laste lemmikud.</p>
 			
 			<p class="paragraph">
-			Laskealale järgneb autode ala, kus saab kihutada võidu oma väiksemate 
-			või suuremate õdede ja vendadega või teiste külastajatega. 
-			Millele järgneb ronimisala. Ronimisala saab alguse autoalast. Ronimisala on kolme korruseline, 
-			kus on palju põnevaid takistusi ja liumägesid ning millel annab mängida mitmeid erinevaid 
-			mänge teiste Lennumaa külastajatega. Ronimisalalt leiab kolm erineva kiiruse, 
-			pikkuse ja kõrgusega liutoru ning lisaks sellele veel on 6 erinevat Eestimaa kõrgeimat 
-			siseliumäge. Kes soovib julgust proovile panna, siis sellel on võimalik vaadata alla 
-			6 meetri kõrguselt läbi klaaspõranda.
+			Laskealale jÃ¤rgneb autode ala, kus saab kihutada vÃµidu oma vÃ¤iksemate 
+			vÃµi suuremate Ãµdede ja vendadega vÃµi teiste kÃ¼lastajatega. 
+			Millele jÃ¤rgneb ronimisala. Ronimisala saab alguse autoalast. Ronimisala on kolme korruseline, 
+			kus on palju pÃµnevaid takistusi ja liumÃ¤gesid ning millel annab mÃ¤ngida mitmeid erinevaid 
+			mÃ¤nge teiste Lennumaa kÃ¼lastajatega. Ronimisalalt leiab kolm erineva kiiruse, 
+			pikkuse ja kÃµrgusega liutoru ning lisaks sellele veel on 6 erinevat Eestimaa kÃµrgeimat 
+			siseliumÃ¤ge. Kes soovib julgust proovile panna, siis sellel on vÃµimalik vaadata alla 
+			6 meetri kÃµrguselt lÃ¤bi klaaspÃµranda.
 
-			Ronimisala juurest leiate veel meie labürindi ja palliplatsi. 
-			Palliplatsil saab mängida korvpalli ja jalgpalli.
+			Ronimisala juurest leiate veel meie labÃ¼rindi ja palliplatsi. 
+			Palliplatsil saab mÃ¤ngida korvpalli ja jalgpalli.
 
-			Kellele meeldivad lauamängud, siis meil on selleks lauajalgpall. 
-			Lauajalgpall asub ees kohvikualas ja palli tuleb küsida naeratavate administraatorite käest.
+			Kellele meeldivad lauamÃ¤ngud, siis meil on selleks lauajalgpall. 
+			Lauajalgpall asub ees kohvikualas ja palli tuleb kÃ¼sida naeratavate administraatorite kÃ¤est.
 			</p>
 			
 		</p>
 		</div>
 		
 		<div class="right">
-		<h1>LENNUMAA SÜNNIPÄEVATOA EESKIRJAD</h1>
+		<h1>LENNUMAA SÃœNNIPÃ„EVATOA EESKIRJAD</h1>
 		<div id="rules">
 			<ul>
-				<li>Peo pidamiseks on ette nähtud täpselt 3 tundi.</li>
-				<li>Ettevalmistusi saab tulla tegema 15 minutit enne sünnipäeva algust.</li>
-				<li>Sünnipäevatoa ruumid tuleb vabastada õigeaegselt (üle mindud aja eest peab tasuma lisatasu ja võimaluse korral saab aega pikendada). Seepärast soovitame hakata asju kokku panema 20 minutit enne peoaja lõppu.</li>
-				<li>Sünnipäevatoas on kasutamiseks olemas järgmised abivahendid: veekeetja, mikrolaineahi, kohviaparaat. Kaks morsikannu, kaks salatikaussi, vaagen, kaks kohvifiltrit, kaks salatilusikat, tordinuga, tordilabidas.</li>
-				<li>Ühekordsed nõud tuleb võtta kaasa endal</li>
-				<li>Pärast peo lõppu taasta palun sünnipäevatoas selline olukord, mis oli ka saabudes.</li>
-				<li>Sünnipäevatoas on keelatud tarbida alkoholi või teisi keelatud meelemürke.</li>
-				<li>NB! Lennumaal ja sünnipäevatoas tuleb kanda sokke.</li>
+				<li>Peo pidamiseks on ette nÃ¤htud tÃ¤pselt 3 tundi.</li>
+				<li>Ettevalmistusi saab tulla tegema 15 minutit enne sÃ¼nnipÃ¤eva algust.</li>
+				<li>SÃ¼nnipÃ¤evatoa ruumid tuleb vabastada Ãµigeaegselt (Ã¼le mindud aja eest peab tasuma lisatasu ja vÃµimaluse korral saab aega pikendada). SeepÃ¤rast soovitame hakata asju kokku panema 20 minutit enne peoaja lÃµppu.</li>
+				<li>SÃ¼nnipÃ¤evatoas on kasutamiseks olemas jÃ¤rgmised abivahendid: veekeetja, mikrolaineahi, kohviaparaat. Kaks morsikannu, kaks salatikaussi, vaagen, kaks kohvifiltrit, kaks salatilusikat, tordinuga, tordilabidas.</li>
+				<li>Ãœhekordsed nÃµud tuleb vÃµtta kaasa endal</li>
+				<li>PÃ¤rast peo lÃµppu taasta palun sÃ¼nnipÃ¤evatoas selline olukord, mis oli ka saabudes.</li>
+				<li>SÃ¼nnipÃ¤evatoas on keelatud tarbida alkoholi vÃµi teisi keelatud meelemÃ¼rke.</li>
+				<li>NB! Lennumaal ja sÃ¼nnipÃ¤evatoas tuleb kanda sokke.</li>
 			</ul>
 		</div>
 		</div>

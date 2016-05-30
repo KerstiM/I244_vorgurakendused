@@ -1,0 +1,39 @@
+<!DOCTYPE> 
+<html>
+	<head>	
+		<meta http-equiv='Content-Type' content='text/html; charset=utf-8'/>
+	</head>
+	
+<body>
+	<form method='post' action='contact-form-proc.php' name='contactform' id='contactform'>
+		<p>
+			<label for='name'>Enter Name: </label><br>
+			<input type="text" name="name">
+		</p>
+		<p>
+			<label for='email'>Enter Email Address:</label><br>
+			<input type="text" name="email">
+		</p>
+		<p>
+			<label for='message'>Enter Message:</label> <br>
+			<textarea name="message"></textarea>
+		</p>
+		<input type="submit" name='submit' value="submit">
+	</form>
+
+	<script>		
+		document.contactform.onsubmit=function() {
+			if(document.contactform.name.value == '') {
+				alert("Lisa nimi");
+				document.contactform.name.focus();
+				return false;
+			} else if (document.contactform.email.value == '') {
+				alert("Lisa aadress");
+				document.contactform.name.focus();
+				return false;
+			}
+			return true;
+		}	
+	</script>
+</body>
+</html>
