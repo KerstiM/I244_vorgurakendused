@@ -3,24 +3,24 @@
 	<br>
 		<div class="left">
 			<!--<h2>Kirjuta meile</h2>-->
-			<form action="" method="post">
-			<center>
+			<form action="vorm" method="post">
+			
 				<input type="text" name="first_name" placeholder="Eesnimi"><br>
 				<input type="text" name="last_name" placeholder="Perekonnanimi"><br>
 				<input type="text" name="email"  placeholder="E-mail"><br>
 				<textarea rows="5" name="message"  placeholder="Sõnum" cols="25"></textarea><br>
 				<input type="submit" name="submit" value="SAADA">
 			</form>
-			</center>
+			
 		</div>
 		<div class="right">
 			<p class="contactBIG">
-				Ülemiste Keskuse 2. korrus,</br>
-				Suur-Sõjamäe 4, Tallinn</br>
-				Administraator | 5560 0393</br>
-				Sünnipäevad | 5309 8715</br>
-				info@lennumaa.ee</br>
-				broneering@lennumaa.ee</br>
+				Ülemiste Keskuse 2. korrus,<br/>
+				Suur-Sõjamäe 4, Tallinn<br/>
+				Administraator | 5560 0393<br/>
+				Sünnipäevad | 5309 8715<br/>
+				info@lennumaa.ee<br/>
+				broneering@lennumaa.ee<br/>
 			</p>
 		</div>
 			

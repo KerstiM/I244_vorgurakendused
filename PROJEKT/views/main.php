@@ -1,12 +1,15 @@
 	
-	<div id="banner"  align="center">
-		<img src="http://enos.itcollege.ee/~kmiller/vorgurakendused/PROJEKT/Pildid/Slaider_p6hi.png" alt="Banner" <!--style= "width:442px;height:185px;"-->
+	<div id="banner">
+		<img src="http://enos.itcollege.ee/~kmiller/vorgurakendused/PROJEKT/Pildid/Slaider_p6hi2.png" alt="Banner">
 	</div>
 	<div class="clearfix"></div>
 	
 		<div class="left">
-			<h1>Lennumaa on Tallinna kõige suurem sisemängukeskus koos kolme erineva sünnipäevatoaga. 
-			Iga toal on oma nägu ja tegu, mis teeb sünnipäevade pidamise eriti põnevaks. Igaüks leiab omale sobiva!</h1>
+			<h1 id="mainText">Lennumaa on Tallinna kõige suurem sise&shy;mängu&shy;keskus 
+							koos kolme erineva sünni&shy;päeva&shy;toaga.</h1>
+			<h1 id="mainText2">Iga toal on oma nägu ja tegu, 
+							mis teeb sünni&shy;päevade pidamise eriti põne&shy;vaks. 
+							Igaüks leiab omale sobiva!</h1>
 		</div>
 		
 		<div class="right">

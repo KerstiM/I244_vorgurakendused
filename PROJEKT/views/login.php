@@ -1,7 +1,7 @@
 
 <div id="login">
 
-	<center>
+	
 			<h1>Logi sisse</h1>
 				<form action="?page=login" method="POST" >
 					<input type="text" name="user" placeholder="Kasutajanimi"/><br/>
@@ -13,5 +13,5 @@
 						<div style="color:red;"><?php echo htmlspecialchars($error); ?></div>
 					<?php endforeach;?>
 				<?php endif;?>
-	</center>
+	
 </div>

@@ -30,14 +30,14 @@
 					kõige suurem sünnipäevatuba, mis mahutab 45 last ja lisaks nende saatjad.
 				</p>
 		<hr/><br/>			
-		<p>
+		
 		<h2>Atraktsioonide kirjeldused</h2>
 			<p class="textBIG">
 			Lennumaal on võimalik väikeste lastega toredalt aega veeta meie väikelaste alas, 
 			mis on mõeldud 0 kuni 3 aastastele lastele. Seal saab teha süüa iga väikene meie 
 			väikelaste mänguköögis. Julgemad lapsed saavad ronida ja lasta liugu. 
-			Fantaasiarikkad lapsed saavad mängida peitust oma emme ja issiga.
-			
+			Fantaasiarikkad lapsed saavad mängida peitust oma emme ja issiga.</p>
+			<p class="textBIG">
 			Väikelaste alale järgneb meil laskeala, kus on 8 õhupüssi ja üks kahur, 
 			mis on paljude laste lemmikud.</p>
 			
@@ -49,16 +49,13 @@
 			mänge teiste Lennumaa külastajatega. Ronimisalalt leiab kolm erineva kiiruse, 
 			pikkuse ja kõrgusega liutoru ning lisaks sellele veel on 6 erinevat Eestimaa kõrgeimat 
 			siseliumäge. Kes soovib julgust proovile panna, siis sellel on võimalik vaadata alla 
-			6 meetri kõrguselt läbi klaaspõranda.
-
+			6 meetri kõrguselt läbi klaaspõranda.</p>
+			<p class="textBIG">
 			Ronimisala juurest leiate veel meie labürindi ja palliplatsi. 
-			Palliplatsil saab mängida korvpalli ja jalgpalli.
-
-			Kellele meeldivad lauamängud, siis meil on selleks lauajalgpall. 
-			Lauajalgpall asub ees kohvikualas ja palli tuleb küsida naeratavate administraatorite käest.
-			</p>
-			
-		</p>
+			Palliplatsil saab mängida korvpalli ja jalgpalli.</p>
+			<p class="textBIG">
+			Kellele meeldivad lauamängud, siis meil on selleks lauajalgpall. Lauajalgpall asub ees kohvikualas ja palli tuleb küsida naeratavate administraatorite käest.</p>	
+		
 		</div>
 		
 		<div class="right">

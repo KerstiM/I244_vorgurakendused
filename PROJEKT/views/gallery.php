@@ -1,5 +1,5 @@
 
-	<div class="gallery" align="center">
+	<div class="gallery">
 			<h1>Galerii</h1>
 			
 			<div class="thumbnails">
@@ -16,7 +16,7 @@
 				
 			</div><br/>
 			
-			<div class="preview" align="center">
+			<div class="preview">
 				<img id="preview" src="http://enos.itcollege.ee/~kmiller/vorgurakendused/PROJEKT/Pildid/004.jpg" alt="preview" />
 			</div>	
 	</div>		

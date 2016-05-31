@@ -12,7 +12,7 @@
 	</head>
 	<body>
 		<div id="wrapper">
-			<img id="logo" src="http://enos.itcollege.ee/~kmiller/vorgurakendused/Lennumaa/Pildid/LM_logov.jpg" alt="Logo" style= "width:110px;height:35px;">			
+			<a href="?page=main"><img id="logo" src="http://enos.itcollege.ee/~kmiller/vorgurakendused/PROJEKT/Pildid/LM_logov_noback.png" alt="Logo" style= "width:110px;height:35px;"></a>			
 			<nav class="menu">
 			<a class="burger-nav"></a>
 				<ul id="menu_reg">
