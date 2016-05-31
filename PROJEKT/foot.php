@@ -19,4 +19,7 @@
 			</div>
 		</div>
 	</body>
+	<script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
+	<script src="menu.js"></script>
+
 </html>

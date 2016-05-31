@@ -1,19 +1,13 @@
-/*-----------------BACKGROUND IMAGE START------------------*/
-
+/*-----------------BACKGROUND IMAGE START--------*/
 body {
-		background: url(Pildid/banner_bw.jpg) no-repeat top center fixed; /*#a6a6a6* url(banner1.jpg)/ /* taustapildi lisamine */
+		background: url(Pildid/banner_bw.jpg) no-repeat top center fixed; /* taustapildi lisamine */
 		background-size: cover;
-		width: 100%
-		height: 100%
-		/*opacity: 0.4;
-		filter: alpha (opacity=40);
-		font-family: Arial, Helvetica;*/
+		width: 100%;
+		height: 100%;
 		font-size: 18px;
 	}
-/*-----------------BACKGROUND IMAGE END------------------*/
-
-/*-----------------WHITE BACKGROUND BOX START------------------*/
-	
+/*-----------------BACKGROUND IMAGE END----------*/
+/*-----------------WHITE BACKGROUND BOX START----*/
 	#wrapper {
 		margin: 0 auto;
 		max-width: 950px;
@@ -23,83 +17,70 @@ body {
 		border-radius: 2px;
 		/*opacity: 0.95; 
 		filter: alpha (opacity=95);*/
+	}	
+/*-----------------WHITE BACKGROUND BOX END------*/
+/*-----------------HEADER START------------------*/			
+	img#logo {
+		margin: 5px;
+		padding-right: 10px;
+		float: left;
 	}
-	
-/*-----------------WHITE BACKGROUND BOX START------------------*/	
-		
-	header {
-		width: 96%;
-		min-height: 20px; /* menüü ja ülaääre vahel olev ala?*/
-		padding: 5px;
-		margin-bottom: 0px;
-		text-align: center;
-	}
-	
-	img {
-		text-align: center;
-		max-width: 100%;
-		height: auto;
-		width: auto;
-	}
-
+/*-----------------HEADER END------------------*/
+/*-----------------BANNER START------------------*/
+	div#banner img {
+			text-align: center;
+			max-width: 100%;
+			height: auto;
+			width: auto;
+		}
+/*-----------------BANNER END------------------*/
 /*-----------------MENU START------------------*/
-	.menu ul {
+	nav.menu {
+		margin-bottom: 10px;
+	}
+	
+	nav.menu ul {
 		list-style: none;
 		margin: 0;
-		padding-left: 20px;
-	}
-		
-	.menu ul li {
+		padding-left: 10px;
+	}		
+	nav.menu ul li {
 		float: left;
 		border-radius: 3px;	
 		font-family: 'Fjalla One', sans-serif;
-		font-size: 18px;
-		font-weight: 500;
 		letter-spacing: 2px;
 		line-height: 20px;
 		margin-bottom: 1px;
 		text-align: center;
 		text-transform: uppercase;
 	}
-
-	.menu #menu_reg li a{
-		background: #F1F1F1; /*menüü riba taustavärv;  */
+	nav.menu li a{
+		background: #F1F1F1; /*menüü riba taustavärv tavaolekus - helehall  */
 		display: block;
 		padding: 8px 8px;
 		font-weight: normal;
 		font-size: 14px;
-		color: #322F2C; /*menüü fondi värv*/
 		text-decoration: none;
 	}	
+	nav.menu #menu_reg li a {color: #322F2C; /*menüü fondi värv tavaline - valge*/}
+	nav.menu #menu_reg li a:hover {
+		transition: all 0.45s;
+		background: #737373; /*menüü taustavärv hover - tumehall*/
+		color: #fff; /*menüü fondi värv hover - valge*/}
 	
-	.menu #menu_diff li a{
-		background: #F1F1F1; /*menüü riba taustavärv;  */
-		display: block;
-		padding: 8px 8px;
-		font-weight: normal;
-		font-size: 14px;
-		color: #47b8b8; /*menüü fondi värv*/
-		text-decoration: none;
-		
+	
+	nav.menu #menu_diff li a {color: #47b8b8; /*menüü fondi värv tavaline - sinine*/}
+	nav.menu #menu_diff li a:hover {
+		transition: all 0.45s;
+		background: #737373; /*menüü taustavärv hover - tumehall*/
+		color: #ffcc00; /*menüü fondi värv hover - kollane*/}
+	
+	#menu.active {
+		background: #737373; /*menüü taustavärv hover - tumehall*/
+		color: #ffcc00; /*menüü fondi värv hover - kollane*/}
 	}
-		
-	.menu #menu_diff li a:hover, .menu #menu_diff li.active a, .menu #menu_diff li.selected a{
-		background-color:  #322F2C;
-		transition: all 0.45s; /*lingil liikudes reageerimisaeg*/
-		color: #fff;
-	}
-	
-	
-	
-	.menu #menu_reg li a:hover, .menu #menu_reg li.active a{
-		background-color:  #322F2C;
-		transition: all 0.45s; /*lingil liikudes reageerimisaeg*/
-		color: #fff;
-	}
-	
-	
-/*-----------------MENU END------------------*/
 
+/*-----------------MENU END------------------*/
 /*-----------------CONTACT START------------------*/
 	.contact {
 		color: #999999;
@@ -114,6 +95,8 @@ body {
 		text-align: left;
 		
 	}	
+/*-----------------CONTACT END------------------*/
+/*-----------------CONTENT START------------------*/	
 	
 	.textBIG {
 		color: #999999;
@@ -121,13 +104,6 @@ body {
 		font-size: 18px;
 		text-align: left;
 		margin-right: 30px;
-	}
-/*-----------------CONTACT END------------------*/
-/*-----------------CONTENT START------------------*/	
-	.quote {
-		color: #999999;
-		font-family: 'PT Sans Narrow';
-		font-size: 18px;
 	}
 	
 	h1 {
@@ -137,34 +113,9 @@ body {
 		font-weight: 500;
 		letter-spacing: 3px;
 		line-height: 30px;
-		margin-bottom: 10px;
+		margin: 10px;
 		text-align: left;
 		text-transform: uppercase;
-	}
-	
-	/*.link{
-		color: #b30059;
-		font-family: 'Fjalla One', sans-serif;
-		font-size: 24px;
-		font-weight: 500;
-		letter-spacing: 3px;
-		line-height: 20px;
-		margin-bottom: 10px;
-		text-align: left;
-		text-transform: uppercase;
-		font-style: italic;
-		border-style: solid;
-		border-weight: 0.5px;
-		border-radius: 5px;
-		display: inline;
-		margin: 2px;
-		padding: 2px;
-	}
-	*/
-	
-	a:link {
-		text-decoration: none;
-		color: #b30059;
 	}
 	
 	h2 {
@@ -174,6 +125,7 @@ body {
 		font-weight: 500;
 		letter-spacing: 3px;
 		line-height: 30px;
+		margin-left: 10px;
 		margin-bottom: 10px;
 		text-align: left;
 		text-transform: uppercase;
@@ -241,18 +193,17 @@ body {
 		width: 100%;
 	}
 	
-	.paragraph {
-		text-align: block;
-	}
-	
-	.clearfix {
-		clear: both;
-	}
+	.clearfix {clear: both;}
 	
 	#banner img {
 		width: 99%
 		display: block;
 	}
+	
+	form {
+		display: block;
+		text-align: center;
+    }
 	
 	input, textarea{
 		color: #47b8b8;
@@ -263,6 +214,11 @@ body {
 		text-align: center;
 		margin: 4px;
 	}
+	
+	form {
+		margin-left: 20px;
+	}
+	
 /*-----------------CONTENT END------------------*/
 /*----2-colums-layout----*/
 
@@ -278,62 +234,41 @@ body {
 		
 /*----2-colums-layout----*/
 	
-/*----Media Queries----*/	
-
-@media screen and (max-width: 700px) {
+/*----MEDIA QUERIES----*/
+	
+/*----Tablet----*/
+@media screen and (max-width: 768px) {
+	
+	img#logo {
+		margin: 5px;
+		padding-right: 10px;
+		float: none;
+	}
+	
+	nav.menu ul li {
+		margin: 10px 0;
+		width: 16%;
+		padding: 0;
+		text-align: center;
+	}
+	
+	nav.menu ul li a{
+		padding: 8px 0;
+		font-size: 14px;
+		width: 100%;
+	}
 
 	.left, .right {
         float:left;
         width: auto;
     }
 	
-	h1 {
-		font-size: 2 em;
-	}
 	
 	h1.link {
 		float: left;
 		display: block;
 	}
 	
-	header {
-		margin-bottom: -30px;
-	}
-	
-	.foot {
-		float: left;
-		display: block;
-	}
-	.menu_reg {
-		width: 99%;
-		margin-bottom: 1px;
-	}
-	
-	.menu ul{
-		list-style: none;
-		margin: 0 auto;
-		padding-left: 0;
-	}
-	
-	.menu li {
-		text-align: center;
-		margin-left: 0 auto;
-		width: 100%; /*<!-- responsive menüü laius-->*/
-	}
-	.menu ul li a{
-		padding: 8px 0;
-		font-size: 14px;
-	}
-	
-	.menu ul li img {
-		padding: 0;
-		text-align: center;
-	}
-	
-	.menu img {
-		width: 98%;
-	}
-}
 /*-------GALLERY START-------*/
 	
 	.thumbnails img {
@@ -351,10 +286,78 @@ body {
 	.preview img {
 		border: 0px solid #444;
 		padding: 1px;
-		width: 100%;
-		height: 100%;
-	}
+		width: 95%;
+		height: 95%;
+	}	
+}
+
 
 /*-------GALLERY END-------*/
 
+@media screen and (max-width: 600px) {
+	img#logo {
+		margin: 5px auto 0;
+		float: none;
+		position: relative;
+	}
+	
+	nav.menu ul li {
+		float: none;
+		display: block;
+		width: 101%;
+		padding: 1px;
+		margin-left: -11px;
+		margin-right: 0px;
+		margin-top: 0;
+		margin-bottom: 0;
+		text-align: center;
+	}
+	
+	.burger-nav {
+		display: block;
+		height: 30px;
+		width: 99%;
+		background: url(Pildid/burger.png) no-repeat 98% center;
+		background-color: #F1F1F1;
+		cursor: pointer;
+		margin-bottom: 1px;
+		margin-right: 0px;
+	}
+	#wrapper {
+		width: 100%;
+		padding: 0;
+	}
+	/*---DROPDOWN MENU IMPORTANT START---*/
+	nav ul {
+		overflow: hidden;
+		height: 0;
+	}
+	
+	nav ul.open {
+		height: auto;
+	}
+	/*---DROPDOWN MENU IMPORTANT END---*/
+	
+}	
 
+/*-------Mobile------------*/	
+@media screen and (max-width: 480px) {
+	.thumbnails img {
+		height: 60px;
+		border: 0px solid #555;
+		padding: 1px;
+		margin: 1px 1px 1px 1px;
+	}
+	
+	.thumbnails img:hover {
+		border: 1px solid #00ccff;
+		cursor: pointer;
+	}
+
+	.preview img {
+		border: 0px solid #444;
+		padding: 1px;
+		width: 95%;
+		height: 95%;
+	}	
+}

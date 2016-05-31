@@ -1,7 +1,6 @@
 $(document).ready(function () {
-    $("nav.menu ul li a").click(function () {
-        $("nav.menu ul li a").removeClass("nav.menu li.current");
-        $(.this).addClass("nav.menu li.current");
+	$(".burger-nav").on("click", function() {
+		$("nav ul").toggleClass("open");
     });
 });
 
