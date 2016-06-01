@@ -32,6 +32,7 @@ body {
 			max-width: 100%;
 			height: auto;
 			width: auto;
+			margin-bottom: 20px;
 		}
 /*-----------------BANNER END------------------*/
 /*-----------------MENU START------------------*/
@@ -59,7 +60,7 @@ body {
 		display: block;
 		padding: 8px 8px;
 		font-weight: normal;
-		font-size: 14px;
+		font-size: 20px;
 		text-decoration: none;
 	}	
 	nav.menu #menu_reg li a {color: #322F2C; /*menüü fondi värv tavaline - valge*/}
@@ -97,13 +98,53 @@ body {
 	}	
 /*-----------------CONTACT END------------------*/
 /*-----------------CONTENT START------------------*/	
-	
+	#luubigatydruk {
+		max-width: 90%;
+		size: 50%;
+		/*position: relative;*/
+		margin-left: 0px;
+	}
 	.textBIG {
 		color: #999999;
 		font-family: 'PT Sans Narrow';
 		font-size: 18px;
 		text-align: justify;
 		margin-right: 30px;
+	}
+	
+	h1#mainText {
+		color: #737373;
+		border-style: solid;
+		border-color: #ffcc00;
+		border-radius: 10px;
+		border-width: thin;
+		width: 90%;
+		text-align: center;
+		letter-spacing: 3px;
+		line-height: 40px;
+		margin: auto;
+		padding: 0;
+		max-width: 70%;
+		display: block;
+	}
+	
+	h1#mainText2 {
+		width: 90%;
+		text-align: center;
+		margin-bottom: 20px;
+		padding: 0;
+	}
+	
+	h1#mainText3 {
+		color: #737373;
+		width: 100%;
+		text-align: center;
+		letter-spacing: 2px;
+		line-height: 40px;
+		margin-top: 20px;
+		margin-bottom: 20px;
+		padding: 5px;
+		float: none;	
 	}
 	
 	h1 {
@@ -214,6 +255,11 @@ body {
 		margin: 4px;
 	}
 
+	div.middle {
+		float: none;
+		width: 45%;
+	}
+
 	
 /*-----------------CONTENT END------------------*/
 /*----2-colums-layout----*/
@@ -231,11 +277,41 @@ body {
 	}
 		
 /*----2-colums-layout----*/
+
+/*-------GALLERY START-------*/
+
+	.thumbnails img {
+		height: 60px;
+		border: 0px solid #555;
+		padding: 1px;
+		margin: 1px 1px 1px 1px;
+		display: inline-block;
+	}
+	
+	.thumbnails img:hover {
+		border: 1px solid #00ccff;
+		cursor: pointer;
+	}
+
+	.preview img {
+		border: 0px solid #444;
+		padding: 1px;
+		width: 100%;
+		height: 100%;
+	}	
+
+/*-------GALLERY END-------*/
 	
 /*----MEDIA QUERIES----*/
 	
 /*----Tablet----*/
 @media screen and (max-width: 768px) {
+	#luubigatydruk {
+		max-width: 90%;
+		size: 50%;
+		position: relative;
+		margin-left: 0px;
+	}
 	
 	img#logo {
 		margin: 5px;
@@ -271,34 +347,20 @@ body {
 		display: block;
 	}
 	
-/*-------GALLERY START-------*/
-	
-	.thumbnails img {
-		height: 60px;
-		border: 0px solid #555;
-		padding: 1px;
-		margin: 1px 1px 1px 1px;
-		display: inline-block;
+	h1#mainText, h1#mainText2, h1#mainText3 {
+		font-size: 1em;
 	}
-	
-	.thumbnails img:hover {
-		border: 1px solid #00ccff;
-		cursor: pointer;
-	}
-
-	.preview img {
-		border: 0px solid #444;
-		padding: 1px;
-		width: 100%;
-		height: 100%;
-	}	
 }
 
-
-/*-------GALLERY END-------*/
-
 @media screen and (max-width: 600px) {
-	img#logo {
+	#luubigatydruk {
+		size: 50%;
+		position: relative;
+		margin: auto;
+		float: none;
+	}
+	
+	mg#logo {
 		display: block;
 		float: none;
 		margin: auto;
@@ -314,6 +376,7 @@ body {
 		margin-top: 0;
 		margin-bottom: 0;
 		text-align: center;
+		z-index: 1;
 	}
 	
 	.burger-nav {
@@ -325,6 +388,7 @@ body {
 		cursor: pointer;
 		margin-bottom: 1px;
 		margin-right: 0px;
+		z-index: 1;
 	}
 	#wrapper {
 		width: 100%;
@@ -373,21 +437,36 @@ body {
 		padding: 0;
 	}
 	
-	h1#mainText, h1#mainText2 {
+	h1#mainText3{
+		color: #737373;
+		border-radius: 10px;
+	}
+	
+	h1#mainText, h1#mainText2, h1#mainText3{
 		width: 90%;
 		text-align: center;
-		margin-bottom: 20px;
+		font-size: 1em;
+		margin: auto;
+		margin-top: 20px;
 		padding: 0;
 	}
 }	
 
 /*-------Mobile------------*/	
 @media screen and (max-width: 480px) {
+	#luubigatydruk {
+		size: 20%;
+		position: relative;
+		margin: auto;
+		opacity: 0.5;
+	}
+	
 	.left, .right {
 		display: block;
         float: none;
         width: auto;
     }
+	
 	
 	img#logo{
 		margin-top: 0px;
@@ -437,11 +516,12 @@ body {
 	
 	h1 {margin-top: 40px;}
 	
-	h1#mainText, h1#mainText2 {
+	h1#mainText, h1#mainText2, h1#mainText3{
 		width: 90%;
 		text-align: center;
 		font-size: 1em;
 		margin: auto;
+		margin-top: 20px;
 		padding: 0;
 	}
 	

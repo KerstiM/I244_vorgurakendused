@@ -1,11 +1,11 @@
 	<h1>SÜNNIPÄEVAD JA ÜRITUSED</h1>
 	
-	
-	<?php if(isset($_SESSION['loggedinuser'])): ?>
+	<h1><a href="?page=booking">Broneeri</a> üritus juba täna!</h1>	
+	<!--<?php if(isset($_SESSION['loggedinuser'])): ?>
 		<h1><a href="?page=booking">Broneeri</a> üritus juba täna!</h1>						
 	<?php else: ?>
 		<h1 class="textBIG"><a href="?page=login">Logi sisse</a> või <a href="?page=registration">Registreeri</a>, et broneerida!</h1>
-	<?php endif; ?>
+	<?php endif; ?>-->
 	
 		<div class="left">
 			<h2>Pargituba</h2>
@@ -40,7 +40,6 @@
 			<p class="textBIG">
 			Väikelaste alale järgneb meil laskeala, kus on 8 õhupüssi ja üks kahur, 
 			mis on paljude laste lemmikud.</p>
-			
 			<p class="textBIG">
 			Laskealale järgneb autode ala, kus saab kihutada võidu oma väiksemate 
 			või suuremate õdede ja vendadega või teiste külastajatega. 
@@ -54,10 +53,11 @@
 			Ronimisala juurest leiate veel meie labürindi ja palliplatsi. 
 			Palliplatsil saab mängida korvpalli ja jalgpalli.</p>
 			<p class="textBIG">
-			Kellele meeldivad lauamängud, siis meil on selleks lauajalgpall. Lauajalgpall asub ees kohvikualas ja palli tuleb küsida naeratavate administraatorite käest.</p>	
+			Kellele meeldivad lauamängud, siis meil on selleks lauajalgpall. 
+			Lauajalgpall asub ees kohvikualas ja palli tuleb küsida naeratavate administraatorite käest.</p>	
 		
 		</div>
-		
+
 		<div class="right">
 		<h2>LENNUMAA SÜNNIPÄEVATOA EESKIRJAD</h2>
 		<div id="rules">

@@ -1,3 +1,4 @@
+
 		<div class="clearfix"></div>	
 			<div class="foot">
 			<hr/>
@@ -18,7 +19,10 @@
 						<a href="http://jigsaw.w3.org/css-validator/check/referer">
 							<img src="http://jigsaw.w3.org/css-validator/images/vcss" alt="Valid CSS!" />
 						</a>
+					<!--AUTOR-->
 					</p>
+					<p>	© 2016 Kersti Miller </p>
+					
 			</div>
 		</div>
 	<script type="text/javascript" src="http://code.jquery.com/jquery-1.11.3.min.js"></script>

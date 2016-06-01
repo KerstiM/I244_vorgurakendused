@@ -58,6 +58,23 @@ function logout(){
 	header('Location: controller.php?page=main');
 }
 
+function kontrolli_saadavus($registeredusername){ 
+	global $connection;
+
+	//$registeredusername=mysqli_real_escape_string($connection, $registeredusername);
+     $registeredusername = mysqli_real_escape_string($connection, $_POST["username_reg"]);
+				
+	$query ="SELECT * FROM KerstiM_LennumaaKasutajad WHERE username='$registeredusername'";
+	$result = mysqli_query($connection, $query) or die("$query - ".mysqli_error($connection));
+	if (mysqli_num_rows($result)>0) {
+		$errors[]="Selline kasutaja on juba olemas1";
+		return true;
+	}else { 
+	$errors[]="Selline kasutaja on juba olemas2";
+		return false;
+	}
+}
+
 function registration(){
 	if (isset($_POST['loggedinuser'])) {
 		include_once("views/booking.php");
@@ -87,10 +104,16 @@ function registration(){
 				//suuna broneerimise lehele, muidu kuva registration.php
 
 				echo "Oled registreeritud!";
-
-				global $connection;
-				$registeredusername = mysqli_real_escape_string($connection, $_POST["username_reg"]);
+			global $connection;
 				$registeredpassword = mysqli_real_escape_string($connection, $_POST["password_reg1"]);
+
+				$registeredusername = mysqli_real_escape_string($connection, $_POST["username_reg"]);
+				
+                $result=kontrolli_saadavus($registeredusername);
+				if (!$result){
+		$errors[]="Selline kasutaja on juba olemas";	
+				
+				
 				$sql = "INSERT INTO KerstiM_LennumaaKasutajad (username, password) VALUES ('$registeredusername', SHA1('$registeredpassword'))";
 				$result = mysqli_query($connection, $sql) or die ("Proovi uuesti.");
 
@@ -102,12 +125,9 @@ function registration(){
 					}
 				}
 			}
-
-			
-			echo $registeredusername;
-			echo $registeredpassword;
 		}
 	}
+}
 }
 
 
