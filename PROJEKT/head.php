@@ -20,7 +20,6 @@
 					<li><a href="?page=events">Üritused</a></li>
 					<li><a href="?page=gallery">Galerii</a></li>
 					<li><a href="?page=contact">Kontakt</a></li>
-					<!--<li><a href="?page=booking">Broneeri</a></li>-->
 				</ul>
 				<ul id="menu_diff">
 					
@@ -31,8 +30,8 @@
 						<li><a href="?page=registration">Registreeri</a></li> 
 						<li><a href="?page=login">Logi sisse</a></li> 
 					<?php endif; ?>	
-				
 				</ul>
+				
 				
 					<div class="clearfix"></div>					
 			</nav>

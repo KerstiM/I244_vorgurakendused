@@ -1,10 +1,9 @@
 <form action="?page=registration" method="POST" >
-	
-
 			<h1>Registreeri</h1>
-				<input type="text" name="username_reg" placeholder="Sisesta kasutajanimi"><br/>
-				<input type="password" name="password_reg1" placeholder="Sisesta parool"><br/>
-				<input type="password" name="password_reg2" placeholder="Korda parooli"><br/><br/>
+				<input type="text" name="kasutajanimi" placeholder="Sisesta kasutajanimi"><br/>
+				<?php if (!empty($_POST["kasutajanimi"])) echo "value=\"".htmlspecialchars($_POST["kasutajanimi"])."\""; ?>
+				<input type="password" name="parool" placeholder="Sisesta parool"><br/>
+				<input type="password" name="parool2" placeholder="Korda parooli"><br/><br/>
 				<input type="submit" value="REGISTREERI"/>
 		
 		<?php if (isset($errors)):?>

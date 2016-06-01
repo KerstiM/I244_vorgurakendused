@@ -1,16 +1,21 @@
 <?php
-
+ini_set("display_errors", 1);
+//ühendus andmebaasiga
 function connect_database(){
-	global $connection;
-	$host="localhost";
-	$user="test";
-	$pass="t3st3r123";
-	$db="test";
-	$connection = mysqli_connect($host, $user, $pass, $db) or die("ei saa ühendust mootoriga- ".mysqli_error());
-	mysqli_query($connection, "SET CHARACTER SET UTF8") or die("Ei saanud baasi utf-8-sse - ".mysqli_error($connection));
-	
+  global $connection;
+  $host="localhost";
+  $user="test";
+  $pass="t3st3r123";
+  $db="test";
+  $connection = mysqli_connect($host, $user, $pass, $db) or die("ei saa mootoriga ühendust");
+  mysqli_query($connection, "SET CHARACTER SET UTF8") or die("Ei saanud baasi utf-8-sse - ".mysqli_error($connection));    
 }
-
+//alusta sessioon
+function start_session(){
+	session_set_cookie_params(30*60);
+	session_start();
+}
+//lõpeta sessioon
 function end_session(){
 	$_SESSION = array();
 	if (isset($_COOKIE[session_name()])) {
@@ -18,116 +23,122 @@ function end_session(){
 	}
 	session_destroy();
 }
-
-function login(){
-
-	if (isset($_POST['loggedinuser'])) {
-		include_once("views/booking.php");
-	}
-
-	include_once("views/login.php");
-
-	if (isset($_SERVER['REQUEST_METHOD'])) {
-		if ($_SERVER['REQUEST_METHOD'] == 'POST') {
-			$errors = array();
-			if (empty($_POST['user'])) {
-				$errors[] = "Palun sisesta kasutajanimi ja parool.";
-			}
-			if (empty($_POST['pass'])) {
-				$errors[] = "Palun sisesta kasutajanimi ja parool.";
-			}
-
-			if (empty($errors)){
-				global $connection;
-				$sisestatudusername = mysqli_real_escape_string($connection, $_POST["user"]);
-				$sisestatudpassword = mysqli_real_escape_string($connection, $_POST["pass"]);
-				$sql = "SELECT username, password FROM KerstiM_LennumaaKasutajad WHERE username='$sisestatudusername' AND password=SHA1('$sisestatudpassword')";
-				$result = mysqli_query($connection, $sql) or die ("Sellise kasutajanimega kasutajat ei leidu");
-				$rida = mysqli_num_rows($result);
-				if ($rida > 0) { //user was found in db
-					$_SESSION['loggedinuser'] = $sisestatudusername;
-					header("Location: controller.php?page=main");
-				} 
-			}
-		}
-	}
-}
-
+//logout ja lõpeta sessioon
 function logout(){
-	end_session();
-	header('Location: controller.php?page=main');
+    end_session();
+    header('Location: controller.php?page=main');;
+    exit(0);
 }
 
-function kontrolli_saadavus($registeredusername){ 
-	global $connection;
-
-	//$registeredusername=mysqli_real_escape_string($connection, $registeredusername);
-     $registeredusername = mysqli_real_escape_string($connection, $_POST["username_reg"]);
-				
-	$query ="SELECT * FROM KerstiM_LennumaaKasutajad WHERE username='$registeredusername'";
-	$result = mysqli_query($connection, $query) or die("$query - ".mysqli_error($connection));
-	if (mysqli_num_rows($result)>0) {
-		$errors[]="Selline kasutaja on juba olemas1";
-		return true;
-	}else { 
-	$errors[]="Selline kasutaja on juba olemas2";
-		return false;
-	}
+function kuva_registration() {
+    if(!empty($_POST)) {
+        $errors = array();
+        if(empty($_POST["kasutajanimi"]) and empty($_POST["parool"]) and empty($_POST["parool2"]) ){
+            $errors[] = "Sisesta andmed!";
+        }
+        
+        if(!empty($_POST["kasutajanimi"])){
+            //kontroll, kas samasuguse kasutajanimi on juba andmebaasis olemas
+            global $connection;
+            $u = $_POST["kasutajanimi"];
+            $stmt = mysqli_prepare ($connection, "SELECT id FROM KerstiM_LennumaaKasutajad WHERE username=?");
+            mysqli_stmt_bind_param($stmt, "s", $u);
+            mysqli_stmt_execute($stmt);
+            mysqli_stmt_bind_result ($stmt, $r["id"]);
+            if (mysqli_stmt_fetch($stmt)){
+                $errors[] = "Selline kasutanimi on olemas!";
+            }
+        } else {
+            $errors[] = "Kasutajanimi on sisestamata!";
+        }
+		
+		if (strlen($_POST["kasutajanimi"]) < 5) {
+				$errors[] = "Palun sisesta vähemalt 5 märki.";
+			}
+        
+        if(!empty($_POST["parool"])){
+            $p = $_POST["parool"];
+        } else {
+            $errors[] = "Parool on sisestamata!";
+        }
+		
+		if (strlen($_POST["parool"]) < 5) {
+				$errors[] = "Palun sisesta vähemalt 5 märki.";
+			}
+        
+        if(!empty($_POST["parool2"])){
+            $p2 = $_POST["parool2"];
+            if ($p != $p2){
+                $errors[] = "Paroolid ei ühti!";
+            }
+        } else {
+            $errors[] = "Sisesta parool kaks korda!";
+        }
+        
+        if(empty($errors)){
+            //kasutaja registreerimine andmebaasi
+            global $connection;
+            $stmt = mysqli_prepare ($connection, "INSERT INTO KerstiM_LennumaaKasutajad (username, password) VALUES (?, SHA1(?))");
+            mysqli_stmt_bind_param($stmt, "ss", $u, $p);
+            if (mysqli_stmt_execute($stmt)){
+				header("Location: controller.php?page=login");
+                exit(0);
+            } else {
+                $errors[] = "Registreerimine ebaõnnestus!";
+            }
+        }
+    }
+    include_once("head.php");
+    include("views/registration.php");
+    include_once("foot.php");
 }
 
-function registration(){
+function kuva_login() {
+	
 	if (isset($_POST['loggedinuser'])) {
-		include_once("views/booking.php");
-	} else {
-		include_once("views/registration.php");
+		include_once('views/booking.php');
 	}
 
-	if (isset($_SERVER['REQUEST_METHOD'])) {
-		if ($_SERVER['REQUEST_METHOD'] == 'POST') {
-			$errors = array();
-			if (empty($_POST['username_reg'])) {
-				$errors[] = "Palun sisesta kasutajanimi.";
-			}
-			if ($_POST['password_reg1'] != $_POST['password_reg2']) {
-				$errors[] = "Paroolid ei kattu, palun proovi uuesti.";
-			}
-			if (empty($_POST['password_reg1'])) {
-				$errors[] = "Palun sisesta parool.";
-			}
-			if (empty($_POST['password_reg2'])) {
-				$errors[] = "Palun korda parooli.";
-			}
-
-			if (empty($errors)){
-				//sisestatud andmed andmebaasi
-				//andmebaasist sisestatud kasutaja sessiooni
-				//suuna broneerimise lehele, muidu kuva registration.php
-
-				echo "Oled registreeritud!";
-			global $connection;
-				$registeredpassword = mysqli_real_escape_string($connection, $_POST["password_reg1"]);
-
-				$registeredusername = mysqli_real_escape_string($connection, $_POST["username_reg"]);
-				
-                $result=kontrolli_saadavus($registeredusername);
-				if (!$result){
-		$errors[]="Selline kasutaja on juba olemas";	
-				
-				
-				$sql = "INSERT INTO KerstiM_LennumaaKasutajad (username, password) VALUES ('$registeredusername', SHA1('$registeredpassword'))";
-				$result = mysqli_query($connection, $sql) or die ("Proovi uuesti.");
-
-				if ($result) {
-					if (mysqli_insert_id($connection) > 0) {
-						$_SESSION['loggedinuser'] = $registeredusername;
-						header("Location: controller.php?page=booking");
-						exit(0);
-					}
-				}
-			}
-		}
+    if(!empty($_POST)) {
+        $errors = array();
+        if(empty($_POST["kasutajanimi"]) and empty($_POST["parool"])){
+            $errors[] = "Sisesta andmed!";
+        }
+        
+        if(!empty($_POST["kasutajanimi"])){
+            $u = $_POST["kasutajanimi"];
+        } else {
+            $errors[] = "Kasutajanimi on sisestamata!";
+        }
+        
+        if(!empty($_POST["parool"])){
+            $p = $_POST["parool"];
+        } else {
+            $errors[] = "Parool on sisestamata!";
+        }
+        
+        if(empty($errors)){
+            //kasutajanime ja parooli kontroll
+            global $connection;
+			$sisestatudusername = mysqli_real_escape_string($connection, $_POST["user"]);
+            $stmt = mysqli_prepare ($connection, "SELECT id, username FROM KerstiM_LennumaaKasutajad WHERE username=? AND password=SHA1(?)");
+            mysqli_stmt_bind_param($stmt, "ss", $u, $p);
+            mysqli_stmt_execute($stmt);
+            mysqli_stmt_bind_result ($stmt, $r["id"], $r["name"]);
+            if (mysqli_stmt_fetch($stmt)){
+                $_SESSION["user"] = $r["id"];
+                $_SESSION["username"] = $r["name"];
+				$_SESSION['loggedinuser'] = $sisestatudusername;
+				header("Location: controller.php?page=booking");
+                exit(0);
+            } else {
+                $errors[] = "Kasutajanimi või parool on vale!";
+            }
+        }
 	}
-}
+	include_once("head.php");
+    include("views/login.php");
+    include_once("foot.php");
 }
 
 

@@ -79,6 +79,15 @@ body {
 	#menu.active {
 		background: #737373; /*menüü taustavärv hover - tumehall*/
 		color: #ffcc00; /*menüü fondi värv hover - kollane*/}
+		
+	#seesKasutaja {
+		background: #F1F1F1; /*menüü riba taustavärv tavaolekus - helehall  */
+		display: block;
+		padding: 8px 8px;
+		font-weight: normal;
+		font-size: 14px;
+		text-decoration: none;
+	}
 
 /*-----------------MENU END------------------*/
 /*-----------------CONTACT START------------------*/
@@ -472,7 +481,7 @@ body {
 		margin-top: 0px;
 		position: fixed;
 		display: block;
-		z-index: 1;
+		z-index: 2;
 		top: 0px;
 	}
 	

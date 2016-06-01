@@ -4,8 +4,9 @@
 	
 			<h1>Logi sisse</h1>
 				<form action="?page=login" method="POST" >
-					<input type="text" name="user" placeholder="Kasutajanimi"/><br/>
-					<input type="password" name="pass" placeholder="Parool"/><br/><br/>
+					<input type="text" name="kasutajanimi" placeholder="Kasutajanimi"/><br/>
+					<?php if (!empty($_POST["kasutajanimi"])) echo "value=\"".htmlspecialchars($_POST["kasutajanimi"])."\""; ?>
+					<input type="password" name="parool" placeholder="Parool"/><br/><br/>
 					<input type="submit" value="LOGI SISSE"/>
 				</form>
 				<?php if (isset($errors)):?>
