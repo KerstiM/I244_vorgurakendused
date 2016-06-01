@@ -1,11 +1,10 @@
 	<h1>SÜNNIPÄEVAD JA ÜRITUSED</h1>
-	
-	<h1><a href="?page=booking">Broneeri</a> üritus juba täna!</h1>	
-	<!--<?php if(isset($_SESSION['loggedinuser'])): ?>
+			
+	<?php if(isset($_SESSION['loggedinuser'])): ?>
 		<h1><a href="?page=booking">Broneeri</a> üritus juba täna!</h1>						
 	<?php else: ?>
 		<h1 class="textBIG"><a href="?page=login">Logi sisse</a> või <a href="?page=registration">Registreeri</a>, et broneerida!</h1>
-	<?php endif; ?>-->
+	<?php endif; ?>
 	
 		<div class="left">
 			<h2>Pargituba</h2>
