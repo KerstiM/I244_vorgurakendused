@@ -249,10 +249,12 @@ body {
 		display: block;
 	}
 	
-	form {
+	/*form {
 		display: block;
 		text-align: center;
     }
+	*/
+	
 	
 	input, textarea{
 		color: #47b8b8;

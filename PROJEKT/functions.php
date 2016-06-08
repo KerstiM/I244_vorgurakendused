@@ -119,22 +119,27 @@ function kuva_login() {
         
         if(empty($errors)){
             //kasutajanime ja parooli kontroll
+			
             global $connection;
 			$sisestatudusername = mysqli_real_escape_string($connection, $_POST["user"]);
-            $stmt = mysqli_prepare ($connection, "SELECT id, username FROM KerstiM_LennumaaKasutajad WHERE username=? AND password=SHA1(?)");
+			$sisestatudpassword = mysqli_real_escape_string($connection, $_POST["pass"]);
+            
+			$stmt = mysqli_prepare ($connection, "SELECT id, username FROM KerstiM_LennumaaKasutajad WHERE username=? AND password=SHA1(?)");
             mysqli_stmt_bind_param($stmt, "ss", $u, $p);
             mysqli_stmt_execute($stmt);
             mysqli_stmt_bind_result ($stmt, $r["id"], $r["name"]);
             if (mysqli_stmt_fetch($stmt)){
                 $_SESSION["user"] = $r["id"];
                 $_SESSION["username"] = $r["name"];
-				$_SESSION['loggedinuser'] = $sisestatudusername;
+				$_SESSION["loggedinuser"] = $sisestatudusername;
 				header("Location: controller.php?page=booking");
                 exit(0);
             } else {
                 $errors[] = "Kasutajanimi või parool on vale!";
             }
-        }
+        
+			
+		}
 	}
 	include_once("head.php");
     include("views/login.php");
