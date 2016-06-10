@@ -1,0 +1,24 @@
+BLOGI
+	TABELID
+	ANDMEBAASI STRUKTUUR
+	
+		Bkasutajad
+			id
+			username
+			passwd
+			role
+		
+		Bpostitused
+			id
+			kasutaja_id
+			content
+			title
+			postedat
+		
+		Bkommentaarid
+			id
+			user_id
+			postitus_id
+			content
+			postedat
+		

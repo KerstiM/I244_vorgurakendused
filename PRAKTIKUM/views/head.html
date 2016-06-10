@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>BLOGI</title>
+		<meta charset="UTF-8"/>
+		<link rel="stylesheet" type="text/css" href="style.css">
+		<meta name="viewport" content="width=device-width, inital-scale=1.0">
+	</head>
+	<body>
+	<div id="wrap">
+	<ul id="menu">
+		<li><a href="?">pealeht</a></li>
+		<?php if(empty($_SESSION['user'])): ?>
+			<li><a href="?page=register">registreeru</a></li>
+			<li><a href="?page=login">logi sisse</a></li>
+		<?php else: ?>
+		<li><a href="?page=postit">Postita midagi</a></li>
+			<li><a href="?page=logout">logi välja</a></li>
+			<?php endif;?>
+	</ul>
+	<br/><br/>
+	<div id="content">
+	
+<?php if(!empty($_SESSION['message'])): ?>
+		<p style="color:red"><?php echo $_SESSION['message']; ?></p>
+<?php unset($_SESSION['message']);
+endif;?>

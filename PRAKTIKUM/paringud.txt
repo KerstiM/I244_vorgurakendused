@@ -1,0 +1,22 @@
+CREATE TABLE 00KeM_Bkasutajad (
+id INTEGER PRIMARY KEY auto_increment,
+username VARCHAR(100) UNIQUE,
+passwd VARCHAR(50),
+role ENUM('poster', 'user') DEFAULT 'user'
+);
+
+CREATE TABLE 00KeM_Bpostitused (
+id INTEGER PRIMARY KEY auto_increment,
+kasutaja_id INTEGER,
+content VARCHAR(10000),
+title VARCHAR(200),
+postedat DATETIME
+);
+
+CREATE TABLE 00KeM_Bkommentaarid (
+id INTEGER PRIMARY KEY auto_increment,
+user_id INTEGER,
+postitus_id INTEGER,
+content VARCHAR(500),
+postedat DATETIME
+);

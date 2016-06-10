@@ -51,11 +51,10 @@ function kuva_registration() {
         } else {
             $errors[] = "Kasutajanimi on sisestamata!";
         }
-		
 		if (strlen($_POST["kasutajanimi"]) < 5) {
 				$errors[] = "Palun sisesta vähemalt 5 märki.";
 			}
-        
+		
         if(!empty($_POST["parool"])){
             $p = $_POST["parool"];
         } else {
@@ -65,7 +64,7 @@ function kuva_registration() {
 		if (strlen($_POST["parool"]) < 5) {
 				$errors[] = "Palun sisesta vähemalt 5 märki.";
 			}
-        
+       
         if(!empty($_POST["parool2"])){
             $p2 = $_POST["parool2"];
             if ($p != $p2){
