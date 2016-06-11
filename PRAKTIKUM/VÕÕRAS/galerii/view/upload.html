@@ -1,0 +1,31 @@
+<h1 id="upload" style="text-align: center">Lae üles pilt</h1>
+<form action="?mode=upload&id=<?php if (!empty($pilt['id'])) echo htmlspecialchars($pilt['id']);?>" method="POST" enctype="multipart/form-data">
+<table id="keskele">
+	<tr>
+		<td><label for="pealkiri">Pealkiri:</label></td>
+		<td><input id="pealkiri" type="text" name="pealkiri" maxlength="30" placeholder="Sisesta pealkiri"
+				   value="<?php if (!empty($pilt['pealkiri'])) echo htmlspecialchars($pilt['pealkiri']);?>"/></td>
+	</tr>
+	<tr>
+		<td><label for="autor">Autor:</label></td>
+		<td><input id="autor" type="text" name="autor" maxlength="15" placeholder="Sisesta autor"
+				   value="<?php if (!empty($pilt['autor'])) echo htmlspecialchars($pilt['autor']);?>"/></td>	
+	</tr>		
+	<tr>
+		<td><label for="fail1">Lisa suur pilt:</label></td>
+		<td><input id="fail1" type="file" name="fail1"/></td>
+	</tr>
+	<tr>
+		<td><label for="fail2">Lisa väike pilt:</label></td>
+		<td><input id="fail2" type="file" name="fail2"/></td>
+	</tr>
+	<tr>
+		<td colspan="2"><input type="submit" value="Lisa pilt" /></td>
+	</tr>
+</table>
+</form>
+<?php if(!empty($errors)):
+	foreach($errors as $e):?>
+		<p style="color:red; text-align: center;"><?php echo $e; ?></p>
+<?php endforeach;
+endif; ?>

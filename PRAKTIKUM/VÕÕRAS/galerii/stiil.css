@@ -1,0 +1,171 @@
+body {
+	background-color: #93F3AD;
+}
+
+h1, #content a {
+	color: #4C9961;
+	text-decoration: none;
+}
+
+#content a:hover {
+	text-decoration: underline;
+}
+
+#kogu {
+	background-color: #79F099;
+	max-width: 1000px;
+	min-width: 600px;
+	margin: auto;
+}
+
+#content {
+	background-image: url("taust.jpg");
+	text-align: justify;
+	overflow: auto;
+	min-height: 600px;
+	padding: 10px;
+}
+
+#menu {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+	overflow: hidden;
+}
+
+#menu li {
+	float: left;
+}
+
+#menu li a {
+	text-decoration: none;
+	color: #3A6145;
+	font-size: 18px;
+	font-weight: bold;
+	display: block;
+	padding: 14px 16px;
+	text-align: center;
+}
+
+#menu a:hover, .active {
+	background-color: #60C07A;
+	color: white;
+}
+
+#menu .active {
+	color: white;
+}
+
+#avalehepilt {
+	border: 5px ridge white;
+	float: right;
+}
+#pildid img {
+	border: 5px ridge white;
+}
+
+input[type=text], input[type=password] {
+	width: 100%;
+	padding: 10px 20px;
+	box-sizing: border-box;
+}
+
+input[type=text]:focus, input[type=password]:focus {
+	background-color: #B7E5B1;
+	border: 1px solid #6D756F;
+}
+
+input[type=submit], input[type=button] {
+	background-color: #4C9961;
+	border-radius: 5px;
+	border: none;
+	color: white;
+	padding: 5px;
+	width: 100px;
+	height: 35px;
+	font-size: 18px;
+	cursor: pointer;
+	box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+}
+input[type=submit]:hover, input[type=button]:hover {
+	background-color: white;
+	border: 2px solid #4C9961;
+	color: #4C9961;
+}
+table {
+	font-size: 18px;
+}
+
+#keskele {
+	margin: auto;
+}
+
+#keskele td {
+	padding: 10px;
+}
+
+#taust{ /* taust, mis peidab lehe sisu */
+	position: fixed;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	background: rgba(0,0,0,0.7);
+	z-index:5;
+}
+#tabel{ /* toob suure pildi esile ja määrab kuvamise ala tabelina */
+	position: absolute;
+	top: 0px;
+	bottom: 0px;
+	left: 0px;
+	right: 0px;
+	margin:0 auto;
+	z-index: 10;
+	display:table;
+  	width:100%;
+  	height:100%;
+  	color:white;
+}
+#cell{ /* paigutab pildi ja teksti vertikaalselt keskele nagu tabelivälja */
+	display:table-cell;
+  	vertical-align:middle;
+}
+#sisu { /* teeb pildi ümbruse kitsamaks ja annab tausta */
+	display: table;
+	margin: auto;
+	background: rgba(0,0,0,0.7);
+	padding: 10px 40px;
+	position: relative;
+}
+#sulge { /* sulgemise element */
+	position: fixed;
+	top: 0;
+	right: 0;
+	z-index: 15;
+	padding:4px;
+	font-weight: bold;
+}
+#hoidja {  /* ümbritseb kogu suure pildi elementide hulka 0px kõrgusena, et teised elemendid taga oleks kasutatavad*/
+	height: 0px;
+}
+
+#prev, #next {
+	display:block;
+	position: absolute;
+	top:0px;
+	bottom:0px;
+	width: 40px;
+}
+
+#prev:hover, #next:hover{
+	background-color: rgba(255,255,255,0.1);
+}
+
+#prev {
+	left:0px;
+	background: url("prev.png") center no-repeat;
+}
+#next {
+	right:0px;
+	background: url("next.png") center no-repeat;
+}

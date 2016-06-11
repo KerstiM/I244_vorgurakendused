@@ -1,0 +1,18 @@
+<h1>Minu blogi</h1>
+<br/>
+<table id="blogi">
+	<?php foreach($tekstid as $key => $val): ?>
+	<tr>
+		<td class="pealkiri"><?php echo $val['pealkiri']; ?></td>
+	</tr>
+	<tr>
+		<td><?php echo $val['aeg']; ?></td>
+	</tr>		
+	<tr>
+		<td class="sissekanne"><?php echo $val['tekst']; ?></td>
+	</tr>
+	<tr>
+		<td><button type="button">Muuda</button>&nbsp;<button type="button">Kustuta</button></td>
+	</tr>
+	<?php endforeach; ?>
+</table>

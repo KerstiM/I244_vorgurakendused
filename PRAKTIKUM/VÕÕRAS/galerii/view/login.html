@@ -1,0 +1,26 @@
+<h1 id="login" style="text-align: center;">Sisene keskkonda!</h1>
+<form action="?mode=login" method="POST">
+<table id="keskele">
+	<tr>
+		<td><label for="kasutajanimi">Kasutajanimi:</label></td>
+		<td><input id="kasutajanimi" type="text" name="kasutajanimi" maxlength="15" placeholder="Sisesta kasutajanimi"
+			value="<?php if (!empty($_POST['kasutajanimi'])) echo htmlspecialchars($_POST['kasutajanimi']); ?>"/></td>
+	</tr>
+	<tr>
+		<td><label for="parool">Parool:</label></td>
+		<td><input id="parool" type="password" name="parool" maxlength="15" placeholder="Sisesta parool"/></td>	
+	</tr>		
+	<tr>
+		<td colspan="2"><input type="submit" value="Sisene" /></td>
+	</tr>
+</table>
+</form>
+
+<?php if(!empty($errors)):
+	foreach($errors as $e):?>
+		<p style="color:red; text-align: center;"><?php echo $e; ?></p>
+<?php endforeach;
+endif; ?>
+<br/><br/>
+<h2>Sul ei ole veel kontot? Registreeri endale konto <a href="?mode=register">siin!</a></h2>
+

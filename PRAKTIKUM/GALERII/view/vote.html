@@ -1,0 +1,15 @@
+<h3>Hääletamine</h3>
+<form action="?mode=tulemus" method="POST">
+	<?php foreach($pildid as $key => $innerPildid): ?>
+	<p>
+		<?php $nr = $key + 1; ?>
+		<label for="<?php echo 'p{$nr}'; ?>">
+			<img src="<?php echo $innerPildid['link']; ?>" alt="<?php echo $innerPildid['alt']; ?>" height="100" />
+		</label>
+		<input type="radio" value="<?php echo $nr; ?>" id="<?php echo 'p{$nr}'; ?>" name="pilt"/>
+	</p>
+	<?php endforeach; ?>
+	<br/>
+	<input type="submit" value="Valin!"/>
+</form>
+

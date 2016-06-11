@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Marju foorum</title>
+	<meta charset="utf-8" />
+	<link type="text/css" rel="stylesheet" href="stiil.css" />
+	<script src="http://code.jquery.com/jquery-1.11.2.min.js"></script>
+	<script src="kood.js" type="text/javascript"></script>
+</head>
+<body>
+<div id="kogu">
+<ul id="menu">
+	<?php if(empty($_SESSION["user"])):?>
+	<li><a href="?mode=avaleht">Avaleht</a></li>
+	<li><a href="?mode=foorum">Foorum</a></li>
+	<li><a href="?mode=login">Sisene</a></li>
+	<li><a href="?mode=register">Registreeri konto</a></li>
+	<?php else: ?>
+	<li><a href="?mode=avaleht">Avaleht</a></li>
+	<li><a href="?mode=foorum">Foorum</a></li>
+	<li><a href="?mode=write">Lisa uus teema</a></li>
+	<li><a href="?mode=logout">Logi välja</a></li>
+	<?php endif; ?>
+</ul>
+<div id="sisu">
+<?php if(!empty($_SESSION["teade"])): ?>
+	<p style = "color:green"><?php echo $_SESSION["teade"]; ?></p>
+	<?php unset($_SESSION["teade"]); ?>
+<?php endif; ?>

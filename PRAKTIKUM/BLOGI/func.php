@@ -227,7 +227,7 @@ if (!empty($_POST)){
 function hangi_kommentaarid($pid){ //kommentaaride tabeli lühend c, kasutajate tabeli lühend k
 	global $L;
 	$kommid=array();
-	$sql = "SELECT c.*, k.username as kommenteerija FROM Bkommentaarid c, Bkasutajad k WHERE postitus_id=$pid AND k.id = c.kasutaja_id";
+	$sql = "SELECT c.*, k.username as kommenteerija FROM 00KeM_Bkommentaarid c, 00KeM_Bkasutajad k WHERE postitus_id=$pid AND k.id = c.kasutaja_id";
 	$result = mysqli_query($L, $sql);
 	while ($r=mysqli_fetch_assoc($result)){
 		$kommid[]=$r;
@@ -283,7 +283,7 @@ function kuva_postitused(){
 	$jama=false;
 	if (!empty($_GET['user'])) {
 		$user = mysqli_real_escape_string($L,$_GET['user']);
-		$sql = "SELECT p.*, k.username as postitaja, (SELECT count(*) FROM 00KeM_Bkommentaarid WHERE postitus_id = p.id ) as komme 00KeM_FROM Bpostitused p, 00KeM_Bkasutajad k WHERE k.id=p.kasutaja_id AND k.username='$user' ";
+		$sql = "SELECT p.*, k.username as postitaja, (SELECT count(*) FROM 00KeM_Bkommentaarid WHERE postitus_id = p.id ) as komme FROM 00KeM_Bpostitused p, 00KeM_Bkasutajad k WHERE k.id=p.kasutaja_id AND k.username='$user' ";
 		$result = mysqli_query($L, $sql);
 		while ($r=mysqli_fetch_assoc($result)){
 			$postitused[]=$r;
@@ -303,7 +303,6 @@ function kuva_postitused(){
 	include("views/postitused.html");
 	include_once("views/foot.html");
 }
-
 ?>
 
 

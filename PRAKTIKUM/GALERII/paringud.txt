@@ -1,0 +1,7 @@
+CREATE TABLE k_pilt (
+id INTEGER PRIMARY KEY auto_increment,
+thumb VARCHAR(100),
+pilt VARCHAR(100),
+pealkiri VARCHAR(100),
+autor VARCHAR(100)
+);

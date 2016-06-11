@@ -1,0 +1,22 @@
+<h1>Loe teemat</h1>
+<button id="tagasi" type="button">Mine tagasi</button>
+<br/><br/>
+<table id="blogi">
+	<tr>
+		<th class="pealkiri">Teema: Esimene teema testimiseks</th>
+	</tr>
+	<?php foreach($vastused as $key => $val): ?>
+	<tr>
+		<td>Postitas: <span><?php echo $val['autor']; ?></span> <?php echo $val['aeg']; ?></td>
+	</tr>		
+	<tr>
+		<td class="sissekanne"><?php echo $val['tekst']; ?></td>
+	</tr>
+	<tr>
+		<td><button type="button">Vasta</button></td>
+	</tr>
+	<tr>
+		<td><hr></td>
+	</tr>
+	<?php endforeach; ?>
+</table>
