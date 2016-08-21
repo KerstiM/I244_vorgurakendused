@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>HTML toorik</title>
+
+	</head>
+	<body>
+
+    <p>Hinda seda lehte</p>
+
+    <form action="form_action.asp">
+      <input type="radio" name="hinne" onclick="myFunction(this.value)" value="1">1<br>
+      <input type="radio" name="hinne" onclick="myFunction(this.value)" value="2">2<br>
+      <input type="radio" name="hinne" onclick="myFunction(this.value)" value="3">3<br>
+      <input type="radio" name="hinne" onclick="myFunction(this.value)" value="4">4<br>
+      <input type="radio" name="hinne" onclick="myFunction(this.value)" value="5">5<br><br>
+
+      Sinu antud hinne on: <input type="text" id="result">
+      <input type="submit" value="Submit form">
+    </form>
+
+    <script>
+    function myFunction(hinne) {
+        document.getElementById("result").value = hinne;
+    }
+    </script>
+<!--
+
+
+<form id="hinded">
+    <input type="radio" name="hinne" value="1" id="hinne">1
+    <input type="radio" name="hinne" value="2" id="hinne">2
+    <input type="radio" name="hinne" value="3" id="hinne">3
+    <input type="radio" name="hinne" value="4" id="hinne">4
+    <input type="radio" name="hinne" value="5" id="hinne">5
+</form>
+
+    <button onclick="hindamine()">HINDA</button>
+
+    <p id="antudHinne"></p>
+
+    <script>
+      function hindamine() {
+        var x = document.getElementById("hinded").value;
+        document.getElementById("antudHinne").innerHTML = x;
+    }
+    </script>
+-->
+
+	</body>
+</html>

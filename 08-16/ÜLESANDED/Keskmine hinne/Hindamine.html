@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+    <link rel="stylesheet" type="text/css" href="stiil.css" />
+		<title>HTML toorik</title>
+
+	</head>
+	<body>
+
+    <h1>Hinda seda lehte</h1>
+<!--
+    <form action="hindamine.html" id="hinded">
+      <input type="radio" name="hinne" onclick="myFunction(this.value)" value="1">1<br>
+      <input type="radio" name="hinne" onclick="myFunction(this.value)" value="2">2<br>
+      <input type="radio" name="hinne" onclick="myFunction(this.value)" value="3">3<br>
+      <input type="radio" name="hinne" onclick="myFunction(this.value)" value="4">4<br>
+      <input type="radio" name="hinne" onclick="myFunction(this.value)" value="5">5<br><br>
+
+      Sinu antud hinne on:  <input type="text" id="result">
+                            <input type="submit" value="ANNA HINNE">
+    </form>
+
+    <p id="antudHinne"></p>
+
+    <script>
+        function myFunction(hinne) {
+            document.getElementById("result").value = hinne;
+        }
+
+        function hindamine() {
+          var x = document.getElementById("hinded").value;
+          document.getElementById("antudHinne").innerHTML = x;
+        }
+
+    </script>
+-->
+		<?php
+					 function Read() {
+							 $file = "hinded.txt";
+							 echo file_get_contents($file);
+					 }
+					 function Write() {
+							 $file = "hinded.txt";
+							 $sisu = file_get_contents("hinded.txt");
+							 $fp = fopen($file, "w");
+							 $data = $_POST["tekst"] . '<br/><hr>' . $sisu;
+							 fwrite($fp, $data);
+							 fclose($fp);
+					 }
+					if ($_POST["submit"]){
+							Write();
+					};
+			?>
+
+		<form action="<?php echo $_SERVER['PHP_SELF'] ?>" method="post">
+			<input type="radio" name="hinne" onclick="myFunction(this.value)" value="1">1<br>
+			<input type="radio" name="hinne" onclick="myFunction(this.value)" value="2">2<br>
+			<input type="radio" name="hinne" onclick="myFunction(this.value)" value="3">3<br>
+			<input type="radio" name="hinne" onclick="myFunction(this.value)" value="4">4<br>
+			<input type="radio" name="hinne" onclick="myFunction(this.value)" value="5">5<br>
+
+		<!--<textarea name="tekst" rows="6" cols="97"></textarea><br/>-->
+		<input type="submit" name="submit" value="POSTITA">
+		</form>
+
+		<p id="message">
+			<?php
+					if ($_POST["submit"]){
+							echo 'Tekst lisatud';
+					};
+			?>
+		</p>
+		<hr>
+		<h2> Hinded:</h2>
+		<p class="comment">
+		<?php
+					echo Read();
+		?>
+
+
+
+
+
+
+
+
+
+
+<!--
+
+
+<form id="hinded">
+    <input type="radio" name="hinne" value="1" id="hinne">1
+    <input type="radio" name="hinne" value="2" id="hinne">2
+    <input type="radio" name="hinne" value="3" id="hinne">3
+    <input type="radio" name="hinne" value="4" id="hinne">4
+    <input type="radio" name="hinne" value="5" id="hinne">5
+</form>
+
+    <button onclick="hindamine()">HINDA</button>
+
+    <p id="antudHinne"></p>
+
+    <script>
+      function hindamine() {
+        var x = document.getElementById("hinded").value;
+        document.getElementById("antudHinne").innerHTML = x;
+    }
+    </script>
+-->
+
+	</body>
+</html>
