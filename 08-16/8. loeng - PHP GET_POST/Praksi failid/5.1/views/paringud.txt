@@ -1,0 +1,36 @@
+CREATE TABLE `ttanav_kasutajad` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `kasutajanimi` varchar(100) COLLATE utf8_estonian_ci DEFAULT NULL,
+  `parool` varchar(50) COLLATE utf8_estonian_ci DEFAULT NULL,
+  `roll` enum('kasutaja','admin') COLLATE utf8_estonian_ci DEFAULT 'kasutaja',
+  PRIMARY KEY (`id`),
+  UNIQUE KEY `kasutajanimi` (`kasutajanimi`)
+);
+
+INSERT INTO ttanav_kasutajad VALUES (NULL, 'kasutaja', SHA1('parool'), 'kasutaja');
+
+INSERT INTO ttanav_kasutajad (kasutajanimi, parool) VALUES ('asd', SHA1('asd') ), 
+('qwerty', SHA1('qwerty')) ;
+
+
+
+
+ EBATURVALINE
+
+SELECT id, kasutajanimi, roll FROM ttanav_kasutajad WHERE kasutajanimi = '{$_POST['username']}' AND parool = SHA1('{$_POST['passwd']}') 
+
+SELECT id, kasutajanimi, roll FROM ttanav_kasutajad WHERE kasutajanimi = 'asd' AND parool = SHA1('') OR (''='') 
+
+') OR (''='
+
+SELECT id, kasutajanimi, roll FROM ttanav_kasutajad WHERE kasutajanimi = 'asd' # -- ' AND parool = SHA1('{$_POST['passwd']}') 
+
+
+
+
+
+
+
+
+
+

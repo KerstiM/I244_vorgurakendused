@@ -1,0 +1,15 @@
+<form action="?page=login" method="POST">
+
+  <input type="text" placeholder="Sisesta kasutajanimi" name="username" value="<?php if (!empty($_POST['username'])) echo htmlspecialchars($_POST['username']);?>"/><br/>
+
+  <input type="password" placeholder="Sisesta parool" name="passwd"/><br/>
+
+  <input type="submit" value="Logi sisse"/>
+
+</form>
+
+<?php if(!empty($errors)):
+  foreach($errors as $e):?>
+  <p style="color:red"><?php echo $e;?></p>
+<?php endforeach;
+endif;?>

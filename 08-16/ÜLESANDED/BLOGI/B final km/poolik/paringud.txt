@@ -1,0 +1,6 @@
+CREATE TABLE KmKommentaarid (
+id INTEGER PRIMARY KEY auto_increment,
+postitus_id INTEGER,
+content VARCHAR(500),
+postedat DATETIME
+);

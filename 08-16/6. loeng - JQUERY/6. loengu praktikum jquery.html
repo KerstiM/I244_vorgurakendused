@@ -1,0 +1,11 @@
+$("css selektor")
+
+$("#menu")
+
+//aeglaselt listi elemendi värvi muutmine
+$("#menu li:first-child").css("color", "blue").hide("slow")
+
+//listi elemndi peale klikkides läheb ta aktiivsesse klassi
+$("#menu li".click(function() {
+  $(this).addClass("active");
+})

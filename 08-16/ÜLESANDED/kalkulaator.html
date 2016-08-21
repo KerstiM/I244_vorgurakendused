@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Hüpotenuusi kalkulaator</title>
+	<meta charset="utf-8" />
+	<link type="text/css" rel="stylesheet" href="kalkustiil.css" />
+</head>
+<body>
+<div id="sisu">
+<h1>Arvuta täisnurkse kolmnurga hüpotenuusi pikkus</h1>
+<br/><br/>
+<form action="kalkulaator.php" method="POST">
+	<fieldset>
+		<legend>Sisesta andmed</legend>
+		<table>
+			<tr>
+				<td>Esimese kaateti pikkus</td>
+				<td><input id="k1" type="number" name="kaatet1"
+	   		value="<?php if (!empty($_POST['kaatet1'])) echo htmlspecialchars($_POST['kaatet1']); ?>"></td>
+			</tr>
+			<tr>
+				<td>Teise kaateti pikkus</td>
+				<td><input id="k2" type="number" name="kaatet2"
+	   		value="<?php if (!empty($_POST['kaatet2'])) echo htmlspecialchars($_POST['kaatet2']); ?>"></td>
+			</tr>
+			<tr>
+				<td></td>
+				<td><input type="submit" value="Arvuta" /></td>
+			</tr>
+		</table>
+	</fieldset>
+</form>
+<?php if(!empty($errors)):
+	foreach($errors as $e): ?>
+		<p style="color:red;"><?php echo $e; ?></p>
+<?php endforeach;
+endif;?>
+<table id="tulemus">
+	<tr>
+		<td>Hüpotenuusi pikkus on:</td>
+		<td id="res"><?php echo $result; ?></td>
+	</tr>
+</table>
+
+</div>
+</body>
+</html>

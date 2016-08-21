@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+
+    <script src="http://code.jquery.com/jquery-1.11.2.min.js"></script>
+
+    <script>
+    $(document).ready(function() {
+      //mida teha kui leht on laadunud
+     $("#esimene").css("color", "green"); //id järgi
+     console.log( $("#esimene").css("color") );
+
+     $(".teine").css({
+       "color" : "red",
+       "font-weight" : "bold",
+       "font-size" : "20px"
+     });
+     console.log($(".teine")); // classi järgi
+     //milliseid elemente tahame kasutada? first võtab esimese elemendi, tagastab massiivi
+      $(".teine").first().css("background-color", "skyblue");
+
+      $("#kolmas").next().css("background-color", "skyblue");
+      $("#kolmas").prev().css("background-color", "pink");
+    });
+    </script>
+
+    <title>PORTFOLIO</title>
+  </head>
+  <body>
+    <li>red</li>
+    <li id="kolmas">green</li>
+    <li>yellow</li>
+
+    <p id="esimene">esimene tekst</p>
+    <p class="teine">esimene teine tekst</p>
+    <p class="teine">teine teine tekst</p>
+    <p class="teine">kolmas teine tekst</p>
+    <p class="teine">neljas teine tekst</p>
+
+    <ul id="menu">
+      <li><a href="?">tavaline link</a></li>
+      <li class="hover">
+        <span>kohale minnes</span>
+        <ul>
+          <li><a href="?">link</a></li>
+        </ul>
+      </li>
+        <li class="click">
+        <span>klikkides</span>
+        <ul>
+          <li><a href="?">link</a></li>
+        </ul>
+      </li>
+    </ul>
+    <h2>Kersti Miller</h2>
+    <h2>Webdesigner</h2>
+    <div id="gallery">
+      <a href="http://enos.itcollege.ee/~kmiller/vorgurakendused/00KORDUSPROJEKT/img/aaredpiirid.jpg"><img src="http://enos.itcollege.ee/~kmiller/vorgurakendused/00KORDUSPROJEKT/thumb/aaredpiirid_thumb.jpg" alt="aaredpiirid - Kersti Miller" width="150" /></a>
+      <a href="http://enos.itcollege.ee/~kmiller/vorgurakendused/00KORDUSPROJEKT/img/aaredpiiridkm.jpg"><img src="http://enos.itcollege.ee/~kmiller/vorgurakendused/00KORDUSPROJEKT/thumb/aaredpiiridkm_thumb.jpg" alt="aaredpiirid - Kersti Miller" width="150" /></a>
+      <a href="http://enos.itcollege.ee/~kmiller/vorgurakendused/00KORDUSPROJEKT/img/dgklogo.jpg"><img src="http://enos.itcollege.ee/~kmiller/vorgurakendused/00KORDUSPROJEKT/thumb/dgklogo_thumb.jpg" alt="dgk - Kersti Miller" width="150" /></a>
+      <a href="http://enos.itcollege.ee/~kmiller/vorgurakendused/00KORDUSPROJEKT/img/dgkpais.jpg"><img src="http://enos.itcollege.ee/~kmiller/vorgurakendused/00KORDUSPROJEKT/thumb/dgkpais_thumb.jpg" alt="dgk - Kersti Miller" width="150" /></a>
+      <a href="http://enos.itcollege.ee/~kmiller/vorgurakendused/00KORDUSPROJEKT/img/digigirls.png"><img src="http://enos.itcollege.ee/~kmiller/vorgurakendused/00KORDUSPROJEKT/thumb/digigirls_thumb.png" alt="digigirls - Kersti Miller" width="150" /></a>
+      <a href="http://enos.itcollege.ee/~kmiller/vorgurakendused/00KORDUSPROJEKT/img/lennumaa.png"><img src="http://enos.itcollege.ee/~kmiller/vorgurakendused/00KORDUSPROJEKT/thumb/lennumaa_thumb.png" alt="lennumaa - Kersti Miller" width="150" /></a>
+    </div>
+    <div id="hoidja" style="display:none;">
+      <div id="taust"></div>
+      <div id="tabel">
+        <div id="cell">
+          <div id="sulge" onclick="hideDetails();">Sulge</div>
+          <div id="sisu">
+            <img id="suurpilt" src="http://enos.itcollege.ee/~kmiller/vorgurakendused/00KORDUSPROJEKT/img/aaredpiirid.jpg" alt="ajutine"/><br/>
+            <span id="inf"></span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

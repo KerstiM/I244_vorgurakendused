@@ -1,0 +1,40 @@
+body {
+	background: gold;
+	margin:0;
+}
+
+#wrap{
+	width:700px;
+	margin:auto;
+	background:white;
+	padding:20px;
+}
+
+h1 {
+	font-family: monospace;
+	font-size: 30px;
+	text-align: center;
+}
+
+h2 {
+	font-family: monospace;
+	font-size: 20px;
+	text-align: center;
+
+}
+
+pre {
+    white-space: pre-wrap;       /* CSS 3 */
+    white-space: -moz-pre-wrap;  /* Mozilla, since 1999 */
+    word-wrap: break-word;       /* Internet Explorer 5.5+ */
+ 		font-family: monospace;
+}
+
+.comment {
+	font-family: monospace;
+	border: solid grey 1px;
+	border-radius: 5px;
+	margin:5px 0;
+	padding:5px;
+	background-color: #e6e6e6;
+}

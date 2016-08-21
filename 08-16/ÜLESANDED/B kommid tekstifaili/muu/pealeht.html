@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8" />
+		<title>Komm</title>
+
+		<link rel="stylesheet" type="text/css" href="stiil.css" />
+	</head>
+
+	<body>
+  	   <div id="content">
+        <h1>Kommentaarid:</h1>
+
+				<textarea id="mytext"></textarea>
+
+
+
+
+
+<!--
+				<?php
+						$comment = ' ';
+						if (isset($_POST) && !empty($_POST['ftext'])) {
+						    $comment = $_POST['ftext'];
+						}
+				?>
+					<form name = "SentimentForm" method = "POST" action='pealeht.html'>
+					Input text: <textarea name ="ftext" rows = "10" cols = "50"><?php if(!empty($comment)) { echo $comment; } ?></textarea>
+					<input type= "submit" value = "Send" name = "btn1">
+					</form>
+				<?php if (!empty($comment)) { echo $comment; } ?>
+
+-->
+
+        		<div class="comment">
+        			<b>Kommenteerija</b> ütles:
+        			<pre><?php echo htmlspecialchars($k['content']);?></pre>
+        		</div>
+
+        <form action="?page=post&id=<?php echo $_GET['id']; ?>" method="POST">
+        	<textarea name="content" rows="8" cols="97"><?php if (!empty($_POST['content'])) echo htmlspecialchars($_POST['content']);?></textarea>
+        	<br/>
+        	<input type="submit" value="Kommenteeri"/>
+        </form>
+
+<button type="button" onclick="myFunction()">Try it</button>
+
+				<?php
+					$kommideloendur = "kommentaarid.txt";
+					$kommid = file_get_contents($kommideloendur);
+					$kommid = $kommid + 1;
+					file_put_contents($kommideloendur, $kommid);
+				?>
+
+				<center>
+					<form action="komm.php" method="POST">
+						<input type="submit" name="LikedeArv" value="LIKE!"/>
+					</form>
+					<p>Like'de arv: <?php	echo $likedeArv; ?> </p>
+					<br>
+				</center>
+
+      </div>
+
+			<script>
+					var myText = document.getElementById("myText");
+					var s = myText.value; // This will now contain text of textarea
+
+			function $kommid () {
+				document.getElementById("myText").value = s;
+				}
+
+			}
+					var clicks = 0;
+					function $kommid() {
+							clicks += 1;
+							document.getElementById("clicks").innerHTML = clicks;
+					};
+			</script>
+
+	</body>
+</html>

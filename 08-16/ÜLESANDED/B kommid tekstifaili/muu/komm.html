@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>LIKE counter</title>
+    <link rel="stylesheet" href="Like.css">
+    <script src="Like.js"></script>
+	</head>
+	<body>
+
+    <h1>Kommenteeri!</h1>
+
+		<form action="?page=post&id=<?php echo $_GET['id']; ?>" method="POST">
+			<textarea name="content" rows="8" cols="97"><?php if (!empty($_POST['content'])) echo htmlspecialchars($_POST['content']);?></textarea>
+			<br/>
+			<input type="submit" value="Kommenteeri"/>
+		</form>
+
+      <center>
+        <button type="submit" onclick="likeCounter()">Postita</button>
+      	<p>Kommentaaride arv: <a id="clicks">0</a></p>
+    </center>
+
+	</body>
+</html>

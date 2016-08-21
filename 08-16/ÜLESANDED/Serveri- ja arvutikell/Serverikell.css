@@ -1,0 +1,13 @@
+body {
+  font-family: monospace;
+  font-size: 25px;
+  margin: 200px;
+}
+
+#aKell {
+  color: purple;
+}
+
+#sKell {
+  color: orange;
+}

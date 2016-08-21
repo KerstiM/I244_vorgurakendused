@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Kommentaaride leht</title>
+	<meta charset="utf-8" />
+</head>
+
+<body>
+
+<h1>Kommenteeri:</h1>
+<form action="Kommid.php" method="POST">
+	<textarea name="content" rows="8" cols="30" placeholder="Kirjuta kommentaar"></textarea><br/>
+	<input type="submit" value="Kommenteeri"/>
+</form>
+
+<?php if(!empty($errors)):
+	foreach($errors as $e): ?>
+		<p style="color:red;"><?php echo $e; ?></p>
+<?php endforeach;
+endif;?>
+
+<h1>Loe kommentaare:</h1>
+
+<?php if(!empty($kommid)):
+	foreach($kommid as $k): ?>
+		<div class="comment">
+			<p><?php echo htmlspecialchars($k);?></p>
+		</div>
+<?php endforeach;
+endif;?>
+
+</body>
+</html>

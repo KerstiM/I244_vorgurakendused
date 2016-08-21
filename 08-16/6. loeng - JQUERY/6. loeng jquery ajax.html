@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <script src="http://code.jquery.com/jquery-1.11.2.min.js"></script>
+    <script>
+    $(document).ready(function() {
+      $("#esimene").click(function() {
+        $.get("6. loeng jquery ajax kala.inc", function(data) {
+          $("#sisu").html(data);
+        }, "html")
+      });
+
+      $("#teine").click(function() {
+        $.get("6. loeng jquery ajax kass.inc", function(data) {
+          $("#sisu").html(data);
+        }, "html")
+      });
+    });
+
+    </script>
+
+    <title>PORTFOLIO</title>
+  </head>
+  <body>
+    <button id="esimene">Kala</button>
+    <button id="teine">Kass</button>
+    <div id="sisu">
+      algne sisu saab olema ajax poolt ülekirjutatud
+    </div>
+  </body>
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8" />
+		<title>minu blogi</title>
+		<link rel="stylesheet" type="text/css" href="stiil.css" />
+	</head>
+
+	<body>
+
+  	<div id="wrap">
+
+  	   <div id="content">
+        <h1>Kommenteeri seda pealkirja siin!</h1>
+        
+        <h2>Kommentaarid:</h2>
+        <?php if(!empty($kommid)):
+        	foreach($kommid as $k):?>
+        		<div class="comment">
+        			<b>Kommenteerija</b> ütles:
+        			<pre><?php echo htmlspecialchars($k['content']);?></pre>
+        			@ <?php echo htmlspecialchars($k['postedat']);?>
+        		</div>
+        <?php	endforeach;
+        endif;?>
+
+        <form action="?page=post&id=<?php echo $_GET['id']; ?>" method="POST">
+        	<textarea name="content" rows="8" cols="97"><?php if (!empty($_POST['content'])) echo htmlspecialchars($_POST['content']);?></textarea>
+        	<br/>
+        	<input type="submit" value="Kommenteeri"/>
+        </form>
+        <?php if(!empty($errors)):
+        	foreach($errors as $e):?>
+        		<p style="color:red"><?php echo $e; ?></p>
+        <?php	endforeach;
+        endif;?>
+
+
+      </div>
+  </div>
+
+	</body>
+</html>
